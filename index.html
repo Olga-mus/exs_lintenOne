@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лео</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./vendor/normalize.css">
+</head>
+
+<body>
+    <h1 class="title">Жми на кнопку 🎵, слушай и запоминай звук. Найди такой же звук, нажамая на бабочки</h1>
+    <div class="game">
+        <div class="leo">
+            <img src="./image/leo.png" alt="картинка льва" class="leo__img">
+            <div class="leo__answer">
+                <div class="leo__wrap">
+                    <img src="./image/answer.png" alt="окно для разговора" class="leo__window">
+                    <p class="leo__text">Привет, малыш! Рад видеть тебя! Сегодня у нас удивительное приключение в мире
+                        звуков! Готов начать?</p>
+                </div>
+            </div>
+        </div>
+        <div class="task">
+            <button class="btn-note"></button>
+            <div class="btns">
+                <div class="btn_sound">
+                    <button class="btn_butterfly"></button>
+                    <button class="btn_answer"></button>
+                </div>
+                <div class="btn_sound">
+                    <button class="btn_butterfly"></button>
+                    <button class="btn_answer"></button>
+                </div>
+                <div class="btn_sound">
+                    <button class="btn_butterfly"></button>
+                    <button class="btn_answer"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <button class="nav__btn reset">Начать сначала</button>
+        <button class="nav__btn check">Проверить</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
