@@ -1,3 +1,98 @@
+const inputNamePlayer = document.querySelector('.form__text_input');
+const inputPasswordPlayer = document.querySelector('.form__text_input');
+const btnEnterPlayer = document.querySelector('.form__text_btn');
+const section1 = document.querySelector('.name-player');
+
+const btnTaskNote = document.querySelector('.btn-note');
+const btnsListenNote = document.querySelectorAll('.btn_butterfly');
+
+const btnsAnswerRight = document.querySelectorAll('.btn_answer');
+const btnReset = document.querySelector('.reset');
+const btnCheck = document.querySelector('.check');
+const textLeo = document.querySelector('.leo__text');
+const notes = document.querySelectorAll('.note');
+console.log(notes[0]);
+
+const notesVariantAnswer = Array.from([notes[0], notes[2], notes[4]]);
+console.log(notesVariantAnswer[0]);
+console.log('asdasd');
+
+//нажимаем на кнопку с заданием
+btnTaskNote.addEventListener('click', function (e) {
+  notesVariantAnswer[0].play();
+});
+
+const num = [0, 1, 2];
+
+// document.querySelector('.btns').addEventListener('click', function (e) {
+//   if (e.target.classList.contains('btn_butterfly')) {
+//     console.log('e.target', e.target);
+//     const butterfly = e.target.getAttribute('data-butterfly');
+//     const notesVariantAnswer = [notes[0], notes[2], notes[4]];
+//     console.log(notesVariantAnswer);
+
+//     num.forEach(function (el, i) {
+//       if (butterfly == i) {
+//         notesVariantAnswer[i].play();
+//       }
+//     });
+//     // if (butterfly == 0) {
+//     //   notesVariantAnswer[0].play();
+//     // }
+//     // if (butterfly == 1) {
+//     //   notesVariantAnswer[1].play();
+//     // }
+//     // if (butterfly == 2) {
+//     //   notesVariantAnswer[2].play();
+//     // }
+//   }
+// });
+
+function renderRandomImage() {
+  const randomImage = num
+    .map((image) => image)
+    .sort(() => Math.random() - 0.5)
+    .map(
+      (image) =>
+        ` <div class="btn_sound">
+                        <button type="button" class="btn_butterfly btn_butterfly_${image}" data-butterfly="${image}"></button>
+                        <button type="button" class="btn_answer btn_answer_${image}" data-answer=${image}></button>
+                    </div>
+      `
+    )
+    .join('\n');
+  document.querySelector('.btns').insertAdjacentHTML('afterbegin', randomImage);
+
+  document.querySelector('.btns').addEventListener('click', function (e) {
+    if (e.target.classList.contains('btn_butterfly')) {
+      console.log('e.target', e.target);
+      const butterfly = e.target.getAttribute('data-butterfly');
+      const notesVariantAnswer = [notes[0], notes[2], notes[4]];
+      //связываем кнопку с аудио
+      Array.from(document.querySelector('.btns').children).forEach(function (
+        el,
+        i
+      ) {
+        console.log(el);
+        if (butterfly == i) {
+          notesVariantAnswer[i].play();
+        }
+      });
+    }
+    //верный ответ
+    if (e.target.classList.contains('btn_answer')) {
+      console.log('HHH');
+      console.log('e.target', e.target);
+      if (e.target.getAttribute('data-answer') != 0) {
+        console.log('неверно');
+      } else {
+        console.log('верно');
+      }
+    }
+  });
+}
+
+renderRandomImage();
 // получаем все объекты на странице с классом .key — это наши клавиши
 const keys = document.querySelectorAll('.key');
 // получаем область на странице, куда будем выводить названия нот

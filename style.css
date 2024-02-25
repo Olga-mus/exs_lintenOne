@@ -193,7 +193,8 @@ body {
   display: flex;
   max-width: 1180px;
   align-items: center;
-  margin: 5vh auto;
+  margin: 0 auto;
+  height: 100vh;
 }
 
 .form__img {
