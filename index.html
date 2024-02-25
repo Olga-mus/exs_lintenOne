@@ -10,41 +10,147 @@
 </head>
 
 <body>
-    <h1 class="title">Жми на кнопку 🎵, слушай и запоминай звук. Найди такой же звук, нажамая на бабочки</h1>
-    <div class="game">
-        <div class="leo">
-            <img src="./image/leo.png" alt="картинка льва" class="leo__img">
-            <div class="leo__answer">
-                <div class="leo__wrap">
-                    <img src="./image/answer.png" alt="окно для разговора" class="leo__window">
-                    <p class="leo__text">Привет, малыш! Рад видеть тебя! Сегодня у нас удивительное приключение в мире
-                        звуков! Готов начать?</p>
-                </div>
-            </div>
+
+    <div class="form">
+        <img src="./image/leo.png" alt="картинка льва" class="form__img">
+        <div class="form__inf">
+            <h2 class="form__title">Я тигренок Лео. Давай знакомиться😀</h2>
+            <form class="form__text" action="">
+                <label for="name" class="form__text_title">Как к тебе обращаться?</label>
+                <input type="text" id="name" name="name" placeholder="Введи свое имя" class="form__text_input">
+
+                <label for="password" class="form__text_title">Пароль</label>
+                <input type="text" id="password" name="password" placeholder="Введи пароль" class="form__text_input">
+                <input type="submit" value="ЖМИ" class="form__text_btn">
+            </form>
         </div>
-        <div class="task">
-            <button class="btn-note"></button>
-            <div class="btns">
-                <div class="btn_sound">
-                    <button class="btn_butterfly"></button>
-                    <button class="btn_answer"></button>
-                </div>
-                <div class="btn_sound">
-                    <button class="btn_butterfly"></button>
-                    <button class="btn_answer"></button>
-                </div>
-                <div class="btn_sound">
-                    <button class="btn_butterfly"></button>
-                    <button class="btn_answer"></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="nav">
-        <button class="nav__btn reset">Начать сначала</button>
-        <button class="nav__btn check">Проверить</button>
     </div>
 
+
+    <div class="mian hidden">
+        <h1 class="title">Жми на кнопку 🎵, слушай и запоминай звук. Найди такой же звук, нажамая на бабочки</h1>
+        <div class="game">
+            <div class="leo">
+                <img src="./image/leo.png" alt="картинка льва" class="leo__img">
+                <div class="leo__answer">
+                    <div class="leo__wrap">
+                        <img src="./image/answer_right.png" alt="окно для разговора" class="leo__window">
+                        <p class="leo__text">Привет, малыш! Рад видеть тебя! Сегодня у нас удивительное приключение в
+                            мире
+                            звуков! Готов начать?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="task">
+                <button type="button" class="btn-note"></button>
+                <div class="btns">
+                    <div class="btn_sound">
+                        <button type="button" class="btn_butterfly"></button>
+                        <button type="button" class="btn_answer"></button>
+                    </div>
+                    <div class="btn_sound">
+                        <button type="button" class="btn_butterfly"></button>
+                        <button type="button" class="btn_answer"></button>
+                    </div>
+                    <div class="btn_sound">
+                        <button type="button" class="btn_butterfly"></button>
+                        <button type="button" class="btn_answer"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <button type="button" class="nav__btn reset">Начать сначала</button>
+            <button type="button" class="nav__btn check">Проверить</button>
+        </div>
+    </div>
+
+    <div class="wrong-answer hidden">
+        <div class="wrong-answer__leo">
+            <img src="./image/answer_left.png" alt="окно для разговора" class="wrong-answer__window">
+            <img src="./image/leo_sad.png" alt="" class="wrong-answer__leo-img">
+            <p class="wrong-answer__leo-text">Это не та бабочка... Попробуй еще раз😊</p>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="rightAnswer hidden">
+        <h1 class="title-answer">Здорово! Ты верно отгадал звучащую нотку. А сейчас попробуй поиграть эту ноту на
+            клавиатуре. Можешь
+            пользоваться клавиатурой компьютера, нажимая на буквы-подсказки</h1>
+        <section>
+            <p class="keys__title">Нота До пишется на дополнительной линеечке</p>
+            <div class="note-line">
+                <img src="./image/leo.png" alt="картинка льва" class="leo__img-result">
+                <img class="keys__note" src="./image/c.jpg" alt="нота до">
+            </div>
+            <!-- сюда будем выводить название ноты, клавишу которой мы нажали-->
+            <div class="nowplaying"></div>
+
+            <!-- блок с клавишами -->
+            <div class="keys">
+                <!-- структура такая: код на клавиатуре → название класса → название ноты → текст подсказки -->
+                <div data-key="65" class="key key-0" data-note="ДО">
+                    <span class="hints">A</span>
+                </div>
+                <div data-key="87" class="key sharp key-1" data-note="ДО#/РЕ&#9837;">
+                    <span class="hints">W</span>
+                </div>
+                <div data-key="83" class="key key-2" data-note="РЕ">
+                    <span class="hints">S</span>
+                </div>
+                <div data-key="69" class="key sharp key-3" data-note="РЕ#/МИ&#9837;">
+                    <span class="hints">E</span>
+                </div>
+                <div data-key="68" class="key key-4" data-note="МИ">
+                    <span class="hints">D</span>
+                </div>
+                <div data-key="70" class="key key-5" data-note="ФА">
+                    <span class="hints">F</span>
+                </div>
+                <div data-key="84" class="key sharp key-6" data-note="ФА#/СОЛЬ&#9837;">
+                    <span class="hints">T</span>
+                </div>
+                <div data-key="71" class="key key-7" data-note="СОЛЬ">
+                    <span class="hints">G</span>
+                </div>
+                <div data-key="89" class="key sharp key-8" data-note="СОЛЬ#/ЛЯ&#9837;">
+                    <span class="hints">Y</span>
+                </div>
+                <div data-key="72" class="key key-9" data-note="ЛЯ">
+                    <span class="hints">H</span>
+                </div>
+                <div data-key="85" class="key sharp key-10" data-note="ЛЯ#/СИ&#9837;">
+                    <span class="hints">U</span>
+                </div>
+                <div data-key="74" class="key key-11" data-note="СИ">
+                    <span class="hints">J</span>
+                </div>
+            </div>
+
+            <!-- аудиофайлы, каждый из них отвечает за свою ноту -->
+            <audio class="play-0" data-key="65" src="../audio/040.mp3"></audio>
+            <audio class="play-1" data-key="87" src="../audio/041.mp3"></audio>
+            <audio class="play-2" data-key="83" src="../audio/042.mp3"></audio>
+            <audio class="play-3" data-key="69" src="../audio/043.mp3"></audio>
+            <audio class="play-4" data-key="68" src="../audio/044.mp3"></audio>
+            <audio class="play-5" data-key="70" src="../audio/045.mp3"></audio>
+            <audio class="play-6" data-key="84" src="../audio/046.mp3"></audio>
+            <audio class="play-7" data-key="71" src="../audio/047.mp3"></audio>
+            <audio class="play-8" data-key="89" src="../audio/048.mp3"></audio>
+            <audio class="play-9" data-key="72" src="../audio/049.mp3"></audio>
+            <audio class="play-10" data-key="85" src="../audio/050.mp3"></audio>
+            <audio class="play-11" data-key="74" src="../audio/051.mp3"></audio>
+            <audio class="play-12" data-key="75" src="../audio/052.mp3"></audio>
+            <audio class="play-13" data-key="79" src="../audio/053.mp3"></audio>
+            <audio class="play-14" data-key="76" src="../audio/054.mp3"></audio>
+            <audio class="play-15" data-key="80" src="../audio/055.mp3"></audio>
+            <audio class="play-16" data-key="186" src="../audio/056.mp3"></audio>
+        </section>
+    </div>
     <script src="./script.js"></script>
 </body>
 
