@@ -56,7 +56,9 @@ function renderRandomImage() {
       (image) =>
         ` <div class="btn_sound">
                         <button type="button" class="btn_butterfly btn_butterfly_${image}" data-butterfly="${image}"></button>
-                        <button type="button" class="btn_answer btn_answer_${image}" data-answer=${image}></button>
+                        <label>
+                        <input type="radio" name="answer" value="answer" class="btn_answer btn_answer_${image}" data-answer=${image}>  
+                    </label>
                     </div>
       `
     )
@@ -79,10 +81,12 @@ function renderRandomImage() {
         }
       });
     }
+
     //верный ответ
     if (e.target.classList.contains('btn_answer')) {
       console.log('HHH');
       console.log('e.target', e.target);
+      e.target.classList.toggle('changeAnswer');
       if (e.target.getAttribute('data-answer') != 0) {
         console.log('неверно');
       } else {

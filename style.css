@@ -249,6 +249,10 @@ body {
   border-radius: 10px;
 }
 
+.changeAnswer {
+  background-color: #300a09;
+}
+
 /* настройки внешнего вида ноты, которая появляется над клавишами */
 .nowplaying {
   font-size: 90px;
