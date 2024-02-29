@@ -4,9 +4,12 @@ const btnEnterPlayer = document.querySelector('.form__text_btn');
 const section1 = document.querySelector('.name-player');
 
 const btnTaskNote = document.querySelector('.btn-note');
+console.log(btnTaskNote);
 const btnsListenNote = document.querySelectorAll('.btn_butterfly');
 
 const btnsAnswerRight = document.querySelectorAll('.btn_answer');
+console.log(btnsAnswerRight);
+
 const btnReset = document.querySelector('.reset');
 const btnCheck = document.querySelector('.check');
 const textLeo = document.querySelector('.leo__text');
@@ -56,9 +59,11 @@ function renderRandomImage() {
       (image) =>
         ` <div class="btn_sound">
                         <button type="button" class="btn_butterfly btn_butterfly_${image}" data-butterfly="${image}"></button>
-                        <label>
+                        <label> 
+                        ЖМИ
                         <input type="radio" name="answer" value="answer" class="btn_answer btn_answer_${image}" data-answer=${image}>  
-                    </label>
+                      <span class="btn_custom"></span>
+                        </label>
                     </div>
       `
     )
@@ -81,20 +86,44 @@ function renderRandomImage() {
         }
       });
     }
+    const btnCheck = document.querySelector('.check');
+    btnCheck.classList.remove('disabled');
+    btnCheck.disabled = false;
 
-    //верный ответ
+    //верный ответ или нет
+
     if (e.target.classList.contains('btn_answer')) {
-      console.log('HHH');
       console.log('e.target', e.target);
-      e.target.classList.toggle('changeAnswer');
+      // e.target.classList.toggle('answer');
+      let letter = [];
       if (e.target.getAttribute('data-answer') != 0) {
         console.log('неверно');
+
+        letter.push('б');
       } else {
         console.log('верно');
+
+        letter.push('a');
       }
+
+      //Проверка результата по кнопке Проверить
+      document.querySelector('.check').addEventListener('click', function () {
+        if (letter.includes('a')) {
+          console.log('ууу');
+          document.querySelector('.main').classList.add('hidden');
+          document.querySelector('.answer').classList.remove('hidden');
+        } else {
+          console.log('ttt');
+
+          document.querySelector('.main').classList.add('hidden');
+          document.querySelector('.wrong-answer').classList.remove('hidden');
+        }
+      });
     }
   });
 }
+
+function wrongAnswer() {}
 
 renderRandomImage();
 // получаем все объекты на странице с классом .key — это наши клавиши

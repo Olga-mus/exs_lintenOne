@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="task">
-                <button type="button" class="btn-note"></button>
+                <button type="button" class="btn-note" data-task="0"></button>
                 <div class="btns">
                     <!-- <div class="btn_sound">
                         <button type="button" class="btn_butterfly" data-butterfly="0"></button>
@@ -64,25 +64,25 @@
             </div>
         </div>
         <div class="nav">
-            <button type="button" class="nav__btn reset">Начать сначала</button>
-            <button type="button" class="nav__btn check">Проверить</button>
+            <!-- <button type="button" class="nav__btn reset">Начать сначала</button> -->
+            <button type="button" class="nav__btn check disabled" disabled="true">Проверить</button>
         </div>
     </div>
 
     <div class="wrong-answer hidden">
         <div class="wrong-answer__leo">
-            <img src="./image/answer_left.png" alt="окно для разговора" class="wrong-answer__window">
+            <div class="wrong-answer__window">
+                <p class="wrong-answer__leo-text">Это не та бабочка... Попробуй еще раз</p>
+            </div>
             <img src="./image/leo_sad.png" alt="" class="wrong-answer__leo-img">
-            <p class="wrong-answer__leo-text">Это не та бабочка... Попробуй еще раз😊</p>
+            <button type="button" class="wrong-answer__btn nav__btn reset">Начать сначала</button>
+
         </div>
-
-
-
     </div>
 
-
-    <div class="rightAnswer hidden">
-        <h1 class="title-answer">Здорово! Ты верно отгадал звучащую нотку. А сейчас попробуй поиграть эту ноту на
+    <div class="answer hidden">
+        <h1 class="title-answer">Здорово! Ты верно отгадал звучащую нотку. А сейчас попробуй поиграть эту ноту
+            на
             клавиатуре. Можешь
             пользоваться клавиатурой компьютера, нажимая на буквы-подсказки</h1>
         <section>
@@ -155,6 +155,7 @@
             <audio class="play-16 note" data-key="186" src="../audio/056.mp3"></audio>
         </section>
     </div>
+
     <script src="./script.js"></script>
 </body>
 
