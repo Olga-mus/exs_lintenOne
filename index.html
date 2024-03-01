@@ -10,28 +10,25 @@
 </head>
 
 <body>
-    <div class="name-player hidden">
+    <div class="name-player">
         <div class="form ">
             <img src="./image/leo.png" alt="картинка льва" class="form__img">
             <div class="form__inf">
                 <h2 class="form__title">Я тигренок Лео. Давай знакомиться😀</h2>
                 <form class="form__text">
                     <label for="name" class="form__text_title">Как к тебе обращаться?</label>
-                    <input type="text" id="name" name="name" placeholder="Введи свое имя" class="form__text_input">
+                    <input type="text" id="name" name="name" placeholder="Введи свое имя" class="form__text_input text">
 
                     <label for="password" class="form__text_title">Пароль</label>
                     <input type="text" id="password" name="password" placeholder="Введи пароль"
-                        class="form__text_input">
-                    <input type="submit" value="ЖМИ" class="form__text_btn">
+                        class="form__text_input password">
+                    <input type="button" value="ЖМИ" class="form__text_btn">
                 </form>
             </div>
         </div>
     </div>
 
-
-
-
-    <div class="main">
+    <div class="main hidden">
         <h1 class="title">Жми на кнопку 🎵, слушай и запоминай звук. Найди такой же звук, нажамая на бабочки</h1>
         <div class="game">
             <div class="leo">
@@ -39,9 +36,7 @@
                 <div class="leo__answer">
                     <div class="leo__wrap">
                         <img src="./image/answer_right.png" alt="окно для разговора" class="leo__window">
-                        <p class="leo__text">Привет, малыш! Рад видеть тебя! Сегодня у нас удивительное приключение в
-                            мире
-                            звуков! Готов начать?</p>
+                        <p class="leo__text"></p>
                     </div>
                 </div>
             </div>
@@ -72,7 +67,8 @@
     <div class="wrong-answer hidden">
         <div class="wrong-answer__leo">
             <div class="wrong-answer__window">
-                <p class="wrong-answer__leo-text">Это не та бабочка... Попробуй еще раз</p>
+                <p class="wrong-answer__leo-text">Это не та бабочка... Попробуй еще раз. Жми на кнопку "Начать с начала"
+                </p>
             </div>
             <img src="./image/leo_sad.png" alt="" class="wrong-answer__leo-img">
             <button type="button" class="wrong-answer__btn nav__btn reset">Начать сначала</button>

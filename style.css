@@ -51,6 +51,7 @@ body {
   top: -22px;
   left: 396px;
   font-size: 18px;
+  line-height: 1.5;
 }
 
 .game {
@@ -176,7 +177,7 @@ body {
 
 .wrong-answer__leo-text {
   position: absolute;
-  top: 82px;
+  top: 54px;
   left: 128px;
   font-family: 'Merriweather', Arial, sans-serif;
   font-size: 24px;
@@ -296,7 +297,7 @@ label {
   display: flex;
   flex-direction: column;
   font-size: 26px;
-  transform: scale(1);
+  padding-top: 20px;
 }
 
 .disabled {
