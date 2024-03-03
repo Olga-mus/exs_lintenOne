@@ -771,4 +771,17 @@ label {
   .task {
     top: 88px;
   }
+
+  .form__img {
+    width: 100px;
+    padding-top: 10px;
+  }
+
+  .form__text_input {
+    margin-bottom: 16px;
+  }
+
+  .form__text_title {
+    margin-bottom: 10px;
+  }
 }
