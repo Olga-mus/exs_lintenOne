@@ -746,6 +746,7 @@ label {
 
   .btn-note {
     margin-left: 68%;
+    margin-bottom: 28px;
   }
 
   .title {
@@ -766,7 +767,7 @@ label {
   }
 
   .task {
-    top: 34px;
+    top: 62px;
   }
 
   .form__img {
