@@ -91,6 +91,7 @@ function renderRandomImage() {
       // e.target.classList.toggle('answer');
       let letter = [];
       if (e.target.getAttribute('data-answer') != 0) {
+        console.log(e.target.getAttribute('data-answer'));
         letter.push('б');
         console.log(letter);
       } else {

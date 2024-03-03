@@ -181,7 +181,7 @@ body {
 .wrong-answer__window {
   width: 530px;
   height: 340px;
-  background-image: url(./image/answer_left.png);
+  background-image: url(./image/answer_right.png);
   background-size: cover;
   position: relative;
 }
@@ -737,6 +737,7 @@ label {
 
   .leo__img {
     margin-top: 30px;
+    width: 100px;
   }
 
   .leo__answer {
@@ -764,12 +765,8 @@ label {
     margin-bottom: 10px;
   }
 
-  .leo__img {
-    width: 120px;
-  }
-
   .task {
-    top: 88px;
+    top: 52px;
   }
 
   .form__img {
@@ -783,5 +780,13 @@ label {
 
   .form__text_title {
     margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .main {
+    padding: 0 10px;
   }
 }
