@@ -39,7 +39,7 @@ btnEnterPlayer.addEventListener('click', function () {
 const notesVariantAnswer = Array.from([notes[0], notes[2], notes[4]]);
 
 //нажимаем на кнопку с заданием
-btnTaskNote.addEventListener('keydown', function (e) {
+btnTaskNote.addEventListener('click', function (e) {
   notesVariantAnswer[0].play();
 });
 
@@ -64,7 +64,7 @@ function renderRandomImage() {
     .join('\n');
   document.querySelector('.btns').insertAdjacentHTML('afterbegin', randomImage);
 
-  document.querySelector('.btns').addEventListener('keydown', function (e) {
+  document.querySelector('.btns').addEventListener('click', function (e) {
     if (e.target.classList.contains('btn_butterfly')) {
       console.log('e.target', e.target);
       const butterfly = e.target.getAttribute('data-butterfly');
