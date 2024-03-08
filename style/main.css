@@ -1,4 +1,4 @@
-@import './vendor/fonts/fonts.css';
+@import '../vendor/fonts/fonts.css';
 
 * {
   outline: 1px solid red;
@@ -163,99 +163,6 @@ body {
   -webkit-text-stroke: 1px #000;
   max-width: 1400px;
   margin: 20px auto 0;
-}
-
-.wrong-answer {
-  margin: 25vh auto;
-}
-
-.wrong-answer__leo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-items: flex-start;
-  max-width: 1642px;
-  flex-wrap: wrap;
-}
-
-.wrong-answer__window {
-  width: 530px;
-  height: 340px;
-  background-image: url(./image/answer_right.png);
-  background-size: cover;
-  position: relative;
-}
-
-.wrong-answer__leo-text {
-  position: absolute;
-  top: 54px;
-  left: 128px;
-  font-family: 'Merriweather', Arial, sans-serif;
-  font-size: 24px;
-  line-height: 1.3;
-  width: 270px;
-  text-align: center;
-}
-
-/* Настройки формы приветствия */
-.form {
-  display: flex;
-  max-width: 1180px;
-  align-items: center;
-  margin: 0 auto;
-  height: 100vh;
-}
-
-.form__img {
-  width: 540px;
-}
-
-.form__title {
-  padding: 0 10px;
-  margin: 20px 0;
-}
-
-.form__text {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  margin: 0 auto;
-}
-
-.form__text_title,
-.form__text_input {
-  font-family: 'Merriweather', Arial, sans-serif;
-  font-size: 24px;
-  line-height: 1.3;
-  margin-bottom: 20px;
-}
-
-.form__text_input {
-  margin-bottom: 90px;
-  text-align: center;
-  border-radius: 10px;
-  height: 40px;
-}
-
-.form__text_btn {
-  height: 70px;
-  border-radius: 10px;
-  font-family: 'Merriweather', Arial, sans-serif;
-  font-size: 32px;
-  line-height: 1.3;
-  background-color: #eb3d7f;
-  border: none;
-  margin-bottom: 20px;
-  box-shadow: 3px 3px 20px black;
-}
-
-.form__inf {
-  background-color: #877979b5;
-  box-shadow: 3px 3px 20px black;
-  background-color: #877979b5;
-  box-shadow: 3px 3px 20px black;
-  width: 590px;
-  border-radius: 10px;
 }
 
 .changeAnswer {
@@ -627,25 +534,6 @@ label {
 }
 
 @media screen and (max-width: 660px) {
-  .form {
-    flex-direction: column;
-    max-height: 850px;
-    justify-content: center;
-  }
-
-  .form__img {
-    padding-bottom: 10px;
-  }
-
-  .form__text_input {
-    margin-bottom: 44px;
-    font-size: 20px;
-  }
-
-  .form__text_title {
-    font-size: 20px;
-  }
-
   .game {
     flex-direction: column;
     position: relative;
@@ -707,21 +595,6 @@ label {
   }
 }
 
-@media screen and (max-width: 419px) {
-  .form__inf {
-    width: 310px;
-  }
-
-  .form__img {
-    width: 140px;
-  }
-
-  .form__text {
-    width: 290px;
-    padding: 0 10px;
-  }
-}
-
 @media screen and (max-width: 390px) {
   .btn_butterfly {
     width: 80px;
@@ -770,28 +643,11 @@ label {
     top: 62px;
   }
 
-  .form__img {
-    width: 100px;
-    padding-top: 10px;
-  }
-
-  .form__text_input {
-    margin-bottom: 16px;
-  }
-
-  .form__text_title {
-    margin-bottom: 10px;
-  }
-
   .title {
     font-size: 16px;
   }
 
   .main {
     padding: 0 10px;
-  }
-
-  .form__title {
-    font-size: 22px;
   }
 }
