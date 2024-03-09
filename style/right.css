@@ -1,0 +1,244 @@
+@import '../vendor/fonts/fonts.css';
+
+* {
+  outline: 1px solid red;
+}
+
+button {
+  box-shadow: 3px 3px 20px black;
+  border: none;
+}
+
+body {
+  background-image: url(../image/grass.jpg);
+  font-family: 'Merriweather', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.hidden {
+  display: none;
+}
+
+.note-line {
+  display: flex;
+  max-width: 614px;
+  justify-content: space-between;
+  margin: 10px auto 0;
+  height: 232px;
+}
+
+.leo__img-result {
+  height: 100%;
+}
+
+.title-answer {
+  font-size: 36px;
+  color: white;
+  -webkit-text-stroke: 1px #000;
+  max-width: 1400px;
+  margin: 20px auto 0;
+}
+
+.changeAnswer {
+  background-color: #300a09;
+}
+
+/* настройки внешнего вида ноты, которая появляется над клавишами */
+.nowplaying {
+  font-size: 90px;
+  line-height: 1;
+  color: #4b1f54;
+  text-shadow: 0 0 5rem #fcea2b;
+  transition: all 0.07s ease;
+  min-height: 100px;
+  text-align: center;
+  -webkit-text-stroke: 1.5px #000;
+}
+
+/* общие настройки для всего блока клавиш */
+.keys {
+  display: block;
+  width: 100%;
+  height: 350px;
+  max-width: 880px;
+  position: relative;
+  margin: 0 auto 20px;
+  cursor: none;
+  z-index: 0;
+}
+
+/* общие настройки внешнего вида клавиш */
+.key {
+  position: relative;
+  border: 4px solid black;
+  border-radius: 0.5rem;
+  transition: all 0.07s ease;
+  display: block;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* внешний вид белых клавиш */
+.key:not(.sharp) {
+  float: left;
+  width: 14.28%;
+  height: 100%;
+  background: rgba(255, 255, 255);
+}
+
+/* внешний вид и положение чёрных клавиш */
+.key.sharp {
+  position: absolute;
+  width: 8%;
+  height: 60%;
+  background: #000;
+  color: #eee;
+  top: 0;
+  z-index: 3;
+}
+
+/* настройки смещения текста подсказок, чтобы они оказались на каждой клавише*/
+.key[data-key='87'] {
+  left: 10.5%;
+}
+
+.key[data-key='69'] {
+  left: 24.5%;
+}
+
+.key[data-key='84'] {
+  left: 53.3%;
+}
+
+.key[data-key='89'] {
+  left: 67.5%;
+}
+
+.key[data-key='85'] {
+  left: 81.5%;
+}
+
+.key[data-key='79'] {
+  left: 77%;
+}
+
+.key[data-key='80'] {
+  left: 87%;
+}
+
+/* подсвечиваем нажатую клавишу */
+.playing {
+  transform: scale(0.95);
+  border-color: #fcea2b;
+  box-shadow: 0 0 1rem #fcea2b;
+}
+
+/* настройка внешнего вида подсказок на клавишах */
+.hints {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  bottom: 7px;
+  transition: opacity 0.3s ease-out;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* включаем подсказки на клавишах при наведении курсора */
+.keys:hover .hints {
+  opacity: 1;
+}
+
+.keys:active .hints {
+  opacity: 1;
+}
+
+.keys__note {
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+
+.keys__title {
+  font-size: 26px;
+  text-align: center;
+  margin: 10px 0 10px;
+}
+
+.answer {
+  padding: 0 10px;
+}
+
+.key-0 {
+  background-color: #ee9eff !important;
+}
+
+@media screen and (max-width: 1440px) {
+  .title-answer {
+    max-width: 1090px;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .title-answer {
+    max-width: 830px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .keys {
+    max-width: 790px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .keys {
+    max-width: 670px;
+  }
+
+  .title-answer {
+    max-width: 670px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .keys {
+    max-width: 530px;
+    height: 270px;
+  }
+
+  .title-answer {
+    max-width: 530px;
+    font-size: 22px;
+  }
+
+  .note-line {
+    max-width: 530px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .note-line {
+    height: 132px;
+  }
+
+  .keys__note {
+    margin: 0;
+  }
+
+  .keys__title {
+    font-size: 16px;
+  }
+
+  .title-answer {
+    font-size: 20px;
+  }
+
+  .keys {
+    height: 200px;
+  }
+}
