@@ -21,7 +21,7 @@ Grid Layout, Flexbox, HTML, CSS, Nested БЭМ, JavaScript
 
 **Ссылка на проект:**
 
-[GitHub Pages](https://olga-mus.github.io/game-melody/index.html)
+[GitHub Pages](https://olga-mus.github.io/exs_listenOne/index.html)
 
 **Статус проекта:**
 В разработке.
