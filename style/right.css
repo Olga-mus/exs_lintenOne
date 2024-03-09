@@ -34,8 +34,8 @@ body {
 
 .title-answer {
   font-size: 36px;
-  color: white;
-  -webkit-text-stroke: 1px #000;
+  color: #f4e0f9;
+  /* -webkit-text-stroke: 1px #000; */
   max-width: 1400px;
   margin: 20px auto 0;
 }
@@ -232,13 +232,20 @@ body {
 
   .keys__title {
     font-size: 16px;
+    background-color: #a5e564;
   }
 
   .title-answer {
-    font-size: 20px;
+    font-size: 16px;
+    text-align: center;
   }
 
   .keys {
     height: 200px;
+  }
+
+  .nowplaying {
+    font-size: 50px;
+    min-height: 56px;
   }
 }
