@@ -32,10 +32,11 @@ btnEnterPlayer.addEventListener('click', function () {
       document.querySelector(
         '.leo__text'
       ).textContent = `Выполни задание. Когда догадаешься, какая бабочка села на цветок - жми на кнопку "ПРОВЕРИТЬ" 😉`;
-    }, 5000);
+    }, 8000);
   }
 });
 
+//массив из нот для выбора ответа
 const notesVariantAnswer = Array.from([notes[0], notes[2], notes[4]]);
 
 //нажимаем на кнопку с заданием
@@ -45,6 +46,7 @@ btnTaskNote.addEventListener('click', function (e) {
 
 const num = [0, 1, 2];
 
+//рандомное положение задания
 function renderRandomImage() {
   const randomImage = num
     .map((image) => image)
@@ -93,10 +95,12 @@ function renderRandomImage() {
       console.log('e.target', e.target);
       // e.target.classList.toggle('answer');
       let letter = [];
+      //ответ верный
       if (e.target.getAttribute('data-answer') != 0) {
         console.log(e.target.getAttribute('data-answer'));
         letter.push('б');
         console.log(letter);
+        //ответ неверный
       } else {
         letter.push('a');
         console.log(letter);
@@ -107,7 +111,7 @@ function renderRandomImage() {
         console.log('letter', letter);
         if (!letter) return;
         if (letter.includes('a')) {
-          console.log('ууу');
+          console.log('верно');
           document.querySelector('.main').classList.add('hidden');
           document.querySelector('.answer').classList.remove('hidden');
           //звуки пианино
@@ -187,7 +191,7 @@ function renderRandomImage() {
             });
           }
         } else {
-          console.log('ttt');
+          console.log('неверно');
 
           document.querySelector('.main').classList.add('hidden');
           document.querySelector('.wrong-answer').classList.remove('hidden');
@@ -208,7 +212,5 @@ function renderRandomImage() {
     }
   });
 }
-
-function wrongAnswer() {}
 
 renderRandomImage();
