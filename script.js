@@ -101,10 +101,11 @@ function renderRandomImage() {
         letter.push('a');
         console.log(letter);
       }
-
+      console.log('letterrr', letter);
       //Проверка результата по кнопке Проверить
       document.querySelector('.check').addEventListener('click', function () {
         console.log('letter', letter);
+        if (!letter) return;
         if (letter.includes('a')) {
           console.log('ууу');
           document.querySelector('.main').classList.add('hidden');

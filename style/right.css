@@ -1,8 +1,8 @@
 @import '../vendor/fonts/fonts.css';
 
-* {
+/* * {
   outline: 1px solid red;
-}
+} */
 
 button {
   box-shadow: 3px 3px 20px black;
@@ -245,7 +245,12 @@ body {
   }
 
   .nowplaying {
-    font-size: 50px;
-    min-height: 56px;
+    font-size: 26px;
+    min-height: 28px;
+  }
+
+  .leo__text {
+    font-size: 12px;
+    top: 40px;
   }
 }
