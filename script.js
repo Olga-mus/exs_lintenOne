@@ -32,7 +32,7 @@ btnEnterPlayer.addEventListener('click', function () {
       document.querySelector(
         '.leo__text'
       ).textContent = `Выполни задание. Когда догадаешься, какая бабочка села на цветок - жми на кнопку "ПРОВЕРИТЬ" 😉`;
-    }, 3000);
+    }, 5000);
   }
 });
 
@@ -80,9 +80,12 @@ function renderRandomImage() {
         }
       });
     }
-    const btnCheck = document.querySelector('.check');
-    btnCheck.classList.remove('disabled');
-    btnCheck.disabled = false;
+
+    if (e.target.classList.contains('btn_custom')) {
+      const btnCheck = document.querySelector('.check');
+      btnCheck.classList.remove('disabled');
+      btnCheck.disabled = false;
+    }
 
     //верный ответ или нет
 
