@@ -103,49 +103,22 @@
             </div>
             <p class="keys__title">Нота До пишется на дополнительной линеечке</p>
 
-            <!-- сюда будем выводить название ноты, клавишу которой мы нажали-->
-            <div class="nowplaying"></div>
-
-            <!-- блок с клавишами -->
-            <div class="keys">
-                <!-- структура такая: код на клавиатуре → название класса → название ноты → текст подсказки -->
-                <div data-key="65" class="key key-0" data-note="ДО">
-                    <span class="hints">A</span>
-                </div>
-                <div data-key="87" class="key sharp key-1" data-note="ДО#/РЕ&#9837;">
-                    <span class="hints">W</span>
-                </div>
-                <div data-key="83" class="key key-2" data-note="РЕ">
-                    <span class="hints">S</span>
-                </div>
-                <div data-key="69" class="key sharp key-3" data-note="РЕ#/МИ&#9837;">
-                    <span class="hints">E</span>
-                </div>
-                <div data-key="68" class="key key-4" data-note="МИ">
-                    <span class="hints">D</span>
-                </div>
-                <div data-key="70" class="key key-5" data-note="ФА">
-                    <span class="hints">F</span>
-                </div>
-                <div data-key="84" class="key sharp key-6" data-note="ФА#/СОЛЬ&#9837;">
-                    <span class="hints">T</span>
-                </div>
-                <div data-key="71" class="key key-7" data-note="СОЛЬ">
-                    <span class="hints">G</span>
-                </div>
-                <div data-key="89" class="key sharp key-8" data-note="СОЛЬ#/ЛЯ&#9837;">
-                    <span class="hints">Y</span>
-                </div>
-                <div data-key="72" class="key key-9" data-note="ЛЯ">
-                    <span class="hints">H</span>
-                </div>
-                <div data-key="85" class="key sharp key-10" data-note="ЛЯ#/СИ&#9837;">
-                    <span class="hints">U</span>
-                </div>
-                <div data-key="74" class="key key-11" data-note="СИ">
-                    <span class="hints">J</span>
-                </div>
+            <div class="piano">
+                <div class="key key-w player" data-note="C">ДО</div>
+                <div class="key key-b" data-note="Cs"></div>
+                <div class="key key-w" data-note="D">РЕ</div>
+                <div class="key key-b" data-note="Ds"></div>
+                <div class="key key-w" data-note="E">МИ</div>
+                <div class="key key-w" data-note="F">ФА</div>
+                <div class="key key-b" data-note="Fs"></div>
+                <div class="key key-w" data-note="G">СОЛЬ</div>
+                <div class="key key-b" data-note="Gs"></div>
+                <div class="key key-w" data-note="A">ЛЯ</div>
+                <div class="key key-b" data-note="As"></div>
+                <div class="key key-w" data-note="B">СИ</div>
             </div>
+
+
 
             <!-- аудиофайлы, каждый из них отвечает за свою ноту -->
             <!-- <audio class="play-0 note" data-key="65" src="./audio/040.mp3"></audio>
@@ -168,18 +141,18 @@
 
 
 
-            <audio class="play-0 note" data-key="65" src="./audio/note/note-001.mp3"></audio>
-            <audio class="play-1 note" data-key="87" src="./audio/note/note-002.mp3"></audio>
-            <audio class="play-2 note" data-key="83" src="./audio/note/note-003.mp3"></audio>
-            <audio class="play-3 note" data-key="69" src="./audio/note/note-004.mp3"></audio>
-            <audio class="play-4 note" data-key="68" src="./audio/note/note-005.mp3"></audio>
-            <audio class="play-5 note" data-key="70" src="./audio/note/note-006.mp3"></audio>
-            <audio class="play-6 note" data-key="84" src="./audio/note/note-007.mp3"></audio>
-            <audio class="play-7 note" data-key="71" src="./audio/note/note-008.mp3"></audio>
-            <audio class="play-8 note" data-key="89" src="./audio/note/note-009.mp3"></audio>
-            <audio class="play-9 note" data-key="72" src="./audio/note/note-010.mp3"></audio>
-            <audio class="play-10 note" data-key="85" src="./audio/note/note-011.mp3"></audio>
-            <audio class="play-11 note" data-key="74" src="./audio/note/note-012.mp3"></audio>
+            <audio id="C" class="play-0 note" data-key="65" src="./audio/note/note-001.mp3"></audio>
+            <audio id="Cs" class="play-1 note" data-key="87" src="./audio/note/note-002.mp3"></audio>
+            <audio id="D" class="play-2 note" data-key="83" src="./audio/note/note-003.mp3"></audio>
+            <audio id="Ds" class="play-3 note" data-key="69" src="./audio/note/note-004.mp3"></audio>
+            <audio id="E" class="play-4 note" data-key="68" src="./audio/note/note-005.mp3"></audio>
+            <audio id="F" class="play-5 note" data-key="70" src="./audio/note/note-006.mp3"></audio>
+            <audio id="Fs" class="play-6 note" data-key="84" src="./audio/note/note-007.mp3"></audio>
+            <audio id="G" class="play-7 note" data-key="71" src="./audio/note/note-008.mp3"></audio>
+            <audio id="Gs" class="play-8 note" data-key="89" src="./audio/note/note-009.mp3"></audio>
+            <audio id="A" class="play-9 note" data-key="72" src="./audio/note/note-010.mp3"></audio>
+            <audio id="As" class="play-10 note" data-key="85" src="./audio/note/note-011.mp3"></audio>
+            <audio id="B" class="play-11 note" data-key="74" src="./audio/note/note-012.mp3"></audio>
         </section>
     </div>
 

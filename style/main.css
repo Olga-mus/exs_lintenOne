@@ -499,4 +499,10 @@ label {
   .main {
     padding: 0 10px;
   }
+
+  .nav__btn {
+    width: 110px;
+    height: 40px;
+    font-size: 14px;
+  }
 }

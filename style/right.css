@@ -40,121 +40,6 @@ body {
   margin: 20px auto 0;
 }
 
-.changeAnswer {
-  background-color: #300a09;
-}
-
-/* настройки внешнего вида ноты, которая появляется над клавишами */
-.nowplaying {
-  font-size: 90px;
-  line-height: 1;
-  color: #4b1f54;
-  text-shadow: 0 0 5rem #fcea2b;
-  transition: all 0.07s ease;
-  min-height: 100px;
-  text-align: center;
-  -webkit-text-stroke: 1.5px #000;
-}
-
-/* общие настройки для всего блока клавиш */
-.keys {
-  display: block;
-  width: 100%;
-  height: 350px;
-  max-width: 880px;
-  position: relative;
-  margin: 0 auto 20px;
-  cursor: none;
-  z-index: 0;
-}
-
-/* общие настройки внешнего вида клавиш */
-.key {
-  position: relative;
-  border: 4px solid black;
-  border-radius: 0.5rem;
-  transition: all 0.07s ease;
-  display: block;
-  box-sizing: border-box;
-  z-index: 2;
-}
-
-/* внешний вид белых клавиш */
-.key:not(.sharp) {
-  float: left;
-  width: 14.28%;
-  height: 100%;
-  background: rgba(255, 255, 255);
-}
-
-/* внешний вид и положение чёрных клавиш */
-.key.sharp {
-  position: absolute;
-  width: 8%;
-  height: 60%;
-  background: #000;
-  color: #eee;
-  top: 0;
-  z-index: 3;
-}
-
-/* настройки смещения текста подсказок, чтобы они оказались на каждой клавише*/
-.key[data-key='87'] {
-  left: 10.5%;
-}
-
-.key[data-key='69'] {
-  left: 24.5%;
-}
-
-.key[data-key='84'] {
-  left: 53.3%;
-}
-
-.key[data-key='89'] {
-  left: 67.5%;
-}
-
-.key[data-key='85'] {
-  left: 81.5%;
-}
-
-.key[data-key='79'] {
-  left: 77%;
-}
-
-.key[data-key='80'] {
-  left: 87%;
-}
-
-/* подсвечиваем нажатую клавишу */
-.playing {
-  transform: scale(0.95);
-  border-color: #fcea2b;
-  box-shadow: 0 0 1rem #fcea2b;
-}
-
-/* настройка внешнего вида подсказок на клавишах */
-.hints {
-  display: block;
-  width: 100%;
-  opacity: 0;
-  position: absolute;
-  bottom: 7px;
-  transition: opacity 0.3s ease-out;
-  font-size: 20px;
-  text-align: center;
-}
-
-/* включаем подсказки на клавишах при наведении курсора */
-.keys:hover .hints {
-  opacity: 1;
-}
-
-.keys:active .hints {
-  opacity: 1;
-}
-
 .keys__note {
   display: block;
   margin: auto;
@@ -171,8 +56,55 @@ body {
   padding: 0 10px;
 }
 
-.key-0 {
-  background-color: #ee9eff !important;
+/*пианино*/
+
+.piano {
+  width: 700px;
+  height: 400px;
+  margin: 50px auto;
+  display: flex;
+}
+
+.key {
+  width: 102px;
+  height: 100%;
+  border: 2px solid #000;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+  box-shadow: inset -2px -2px 5px #000;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  background: #fff;
+  user-select: none;
+  transition: 0.1s;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.key-b {
+  width: 70px;
+  background: #000;
+  color: #fff;
+  height: 60%;
+  margin-left: -35px;
+  margin-right: -35px;
+  z-index: 2;
+}
+
+.key.active {
+  background: #ccc;
+  border: 2px solid #f1ed29;
+}
+
+.key-b.active {
+  background: #333;
+  border: 2px solid #f1ed29;
+}
+
+.player {
+  background-color: #eb3d7f;
 }
 
 @media screen and (max-width: 1440px) {
@@ -196,21 +128,40 @@ body {
 }
 
 @media screen and (max-width: 850px) {
-  .keys {
+  /* .keys {
     max-width: 670px;
-  }
+  } */
 
   .title-answer {
     max-width: 670px;
   }
+
+  /* .piano {
+    width: 590px;
+    height: 340px;
+  } */
+}
+
+@media screen and (max-width: 740px) {
+  .piano {
+    width: 574px;
+    height: 340px;
+    margin-top: 20px;
+  }
+
+  .key {
+    width: 86px;
+    font-size: 24px;
+  }
+
+  .key-b {
+    width: 46px;
+    margin-left: -23px;
+    margin-right: -23px;
+  }
 }
 
 @media screen and (max-width: 690px) {
-  .keys {
-    max-width: 530px;
-    height: 270px;
-  }
-
   .title-answer {
     max-width: 530px;
     font-size: 22px;
@@ -218,6 +169,24 @@ body {
 
   .note-line {
     max-width: 530px;
+  }
+}
+
+@media screen and (max-width: 609px) {
+  .piano {
+    width: 490px;
+    height: 266px;
+  }
+
+  .key {
+    width: 76px;
+    font-size: 20px;
+  }
+
+  .key-b {
+    width: 34px;
+    margin-left: -17px;
+    margin-right: -17px;
   }
 }
 
@@ -236,16 +205,44 @@ body {
   }
 
   .title-answer {
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
   }
+}
 
-  .keys {
-    height: 200px;
+@media screen and (max-width: 513px) {
+  .piano {
+    width: 360px;
+    height: 234px;
   }
 
-  .nowplaying {
-    font-size: 26px;
-    min-height: 28px;
+  .key {
+    width: 56px;
+    font-size: 16px;
+  }
+
+  .key-b {
+    width: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+@media screen and (max-width: 513px) {
+  .piano {
+    width: 300px;
+    height: 168px;
+    margin-top: 10px;
+  }
+
+  .key {
+    width: 50px;
+    font-size: 14px;
+  }
+
+  .key-b {
+    width: 26px;
+    margin-left: -13px;
+    margin-right: -13px;
   }
 }
