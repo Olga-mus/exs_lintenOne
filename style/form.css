@@ -166,20 +166,27 @@ body {
 
 @media screen and (max-width: 390px) {
   .form__img {
-    width: 100px;
+    width: 82px;
     padding-top: 10px;
   }
 
   .form__text_input {
     margin-bottom: 16px;
+    font-size: 14px;
   }
 
   .form__text_title {
     margin-bottom: 10px;
     padding-top: 0;
+    font-size: 16px;
   }
 
   .form__title {
-    font-size: 22px;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .form__text_btn {
+    font-size: 26px;
   }
 }
