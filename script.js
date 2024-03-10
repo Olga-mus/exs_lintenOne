@@ -15,7 +15,7 @@ btnEnterPlayer.addEventListener('click', function () {
   inputPasswordPlayer.value.toLowerCase();
   const name = inputNamePlayer.value;
   const firstLetterName = name.slice(0, 1).toUpperCase();
-  const lettersName = name.slice(1);
+  const lettersName = name.slice(1).toLowerCase();
   let nameLetters = [];
   nameLetters.push(firstLetterName, lettersName);
   console.log(nameLetters);
