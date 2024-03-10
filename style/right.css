@@ -108,7 +108,6 @@ body {
 .key.active {
   background: #ccc;
   border: 2px solid #f1ed29;
-  user-select: none;
 }
 
 .key-b.active {
@@ -218,7 +217,7 @@ body {
   }
 
   .title-answer {
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
   }
 }
