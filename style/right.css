@@ -108,6 +108,7 @@ body {
 .key.active {
   background: #ccc;
   border: 2px solid #f1ed29;
+  user-select: none;
 }
 
 .key-b.active {
