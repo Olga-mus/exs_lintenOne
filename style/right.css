@@ -9,6 +9,16 @@ button {
   border: none;
 }
 
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+label:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
 body {
   background-image: url(../image/grass.jpg);
   font-family: 'Merriweather', Arial, sans-serif;
@@ -38,6 +48,7 @@ body {
   /* -webkit-text-stroke: 1px #000; */
   max-width: 1400px;
   margin: 20px auto 0;
+  user-select: none;
 }
 
 .keys__note {
@@ -50,6 +61,7 @@ body {
   font-size: 26px;
   text-align: center;
   margin: 10px 0 10px;
+  user-select: none;
 }
 
 .answer {

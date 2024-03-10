@@ -9,6 +9,11 @@ button {
   border: none;
 }
 
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
 body {
   background-image: url(../image/grass.jpg);
   font-family: 'Merriweather', Arial, sans-serif;
@@ -32,6 +37,7 @@ body {
 .form__title {
   padding: 0 10px;
   margin: 20px 0;
+  user-select: none;
 }
 
 .form__text {
@@ -47,6 +53,10 @@ body {
   font-size: 24px;
   line-height: 1.3;
   margin-bottom: 20px;
+}
+
+.form__text_title {
+  user-select: none;
 }
 
 .form__text_input {
