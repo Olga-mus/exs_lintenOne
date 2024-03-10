@@ -147,6 +147,7 @@ function renderRandomImage() {
             .addEventListener('click', function () {
               document.querySelector('.wrong-answer').classList.add('hidden');
               document.querySelector('.main').classList.remove('hidden');
+              document.querySelector('.answer').classList.add('hidden');
               document.querySelectorAll('.btn_answer').forEach((el) => {
                 console.log(el);
                 el.checked = false;
