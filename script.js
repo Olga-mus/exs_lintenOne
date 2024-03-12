@@ -46,14 +46,20 @@ btnEnterPlayer.addEventListener('click', function () {
     setTimeout(function () {
       document.querySelector(
         '.leo__text'
+      ).textContent = `У меня есть три секрета. Ты узнаешь их, разгадывая задания`;
+    }, 7000);
+    setTimeout(function () {
+      document.querySelector(
+        '.leo__text'
       ).textContent = `Выполни задание. Когда догадаешься, какая бабочка села на цветок - жми на кнопку "ПРОВЕРИТЬ" 😉`;
-    }, 8000);
+    }, 10000);
   } else {
+    //попап с неверным паролем
     const popup = document.querySelector('.form__popup');
     popup.classList.remove('hidden');
     setTimeout(function () {
       popup.classList.add('hidden');
-    }, 2000);
+    }, 1000);
   }
 });
 

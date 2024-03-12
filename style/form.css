@@ -101,6 +101,9 @@ body {
   background-color: aliceblue;
   bottom: 110px;
   left: 162px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form__popup_text {
@@ -110,6 +113,7 @@ body {
   overflow: hidden;
   text-align: center;
   padding: 0;
+  margin: 0;
 }
 
 .form__btn-password {
@@ -144,6 +148,10 @@ body {
   .form {
     max-width: 930px;
   }
+
+  .form__popup {
+    left: 117px;
+  }
 }
 
 @media screen and (max-width: 998px) {
@@ -170,7 +178,18 @@ body {
 
   .form__btn-password {
     left: 294px;
+    top: 8px;
   }
+
+  .form__popup {
+    left: 53px;
+    width: 240px;
+    height: 44px;
+  }
+}
+
+.form__popup_text {
+  font-size: 18px;
 }
 
 @media screen and (max-width: 660px) {
@@ -191,6 +210,10 @@ body {
 
   .form__text_title {
     font-size: 20px;
+  }
+
+  .form__popup {
+    left: 73px;
   }
 }
 
@@ -240,5 +263,15 @@ body {
 
   .form__text_btn {
     font-size: 26px;
+  }
+
+  .form__popup_text {
+    font-size: 14px;
+  }
+
+  .form__popup {
+    width: 194px;
+    height: 32px;
+    left: 56px;
   }
 }
