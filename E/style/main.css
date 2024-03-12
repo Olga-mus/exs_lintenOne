@@ -1,5 +1,5 @@
-/*C*/
-@import '../vendor/fonts/fonts.css';
+/*D*/
+@import '../../vendor/fonts/fonts.css';
 
 /* * {
   outline: 1px solid red;
@@ -16,7 +16,7 @@ button:hover {
 }
 
 body {
-  background-image: url(./image/grass.jpg);
+  background-image: url(../../image/grass.jpg);
   font-family: 'Merriweather', Arial, sans-serif;
   font-size: 18px;
   line-height: 1.3;
@@ -45,7 +45,7 @@ body {
   position: absolute;
   top: -90px;
   left: 290px; */
-  background-image: url(../image/answer_right.png);
+  background-image: url(../../image/answer_right.png);
   width: 450px;
   height: 300px;
   background-size: contain;
@@ -59,7 +59,7 @@ body {
 
 .leo__text {
   position: absolute;
-  width: 300px;
+  width: 280px;
   top: 38px;
   left: 56px;
   font-size: 18px;
@@ -86,21 +86,21 @@ body {
   height: 100px;
   border-radius: 50%;
   background-color: #eb3d7f;
-  background-image: url(../image/note.png);
+  background-image: url(../../image/note.png);
   background-size: 90px;
   background-repeat: no-repeat;
   margin-bottom: 58px;
 }
 
-.btn_butterfly {
+.btn_ball {
   width: 200px;
   height: 200px;
-  background-image: url(../image/butterfly.png);
+  background-image: url(../../image/ball.png);
   background-size: 180px;
   background-repeat: no-repeat;
   border-radius: 50%;
   background-position: center;
-  background-color: #ee9eff;
+  background-color: #f6d6a9a6;
   margin-bottom: 20px;
 }
 
@@ -176,7 +176,7 @@ body {
 }
 
 .btn_custom::before {
-  background-image: url(../image/flower.png);
+  background-image: url(../../image/leo_ball.png);
   content: '';
   width: 100px;
   height: 100px;
@@ -242,7 +242,7 @@ label {
     max-width: 930px;
   }
 
-  .btn_butterfly {
+  .btn_ball {
     width: 190px;
     height: 190px;
     background-size: 160px;
@@ -252,7 +252,7 @@ label {
     width: 444px;
   }
 
-  .btn_butterfly {
+  .btn_ball {
     width: 180px;
     height: 180px;
   }
@@ -304,7 +304,7 @@ label {
     font-size: 32px;
   }
 
-  .btn_butterfly {
+  .btn_ball {
     width: 160px;
     height: 160px;
   }
@@ -313,7 +313,7 @@ label {
     width: 290px;
   }
 
-  .btn_butterfly {
+  .btn_ball {
     width: 160px;
     height: 160px;
     background-size: 140px;
@@ -351,7 +351,7 @@ label {
 }
 
 @media screen and (max-width: 846px) {
-  .btn_butterfly {
+  .btn_ball {
     width: 140px;
     height: 140px;
     background-size: 120px;
@@ -413,7 +413,7 @@ label {
 }
 
 @media screen and (max-width: 480px) {
-  .btn_butterfly {
+  .btn_ball {
     width: 100px;
     height: 100px;
     background-size: 80px;
@@ -458,7 +458,7 @@ label {
     width: 270px;
   }
 
-  .btn_butterfly {
+  .btn_ball {
     width: 80px;
     height: 80px;
     background-size: 60px;
@@ -497,7 +497,7 @@ label {
     font-size: 20px;
   }
 
-  .btn_butterfly {
+  .btn_ball {
     margin-bottom: 0;
   }
 

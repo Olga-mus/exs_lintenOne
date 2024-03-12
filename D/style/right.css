@@ -1,5 +1,5 @@
-/*C*/
-@import '../vendor/fonts/fonts.css';
+/*D*/
+@import '../../vendor/fonts/fonts.css';
 
 /* * {
   outline: 1px solid red;
@@ -21,7 +21,7 @@ label:hover {
 }
 
 body {
-  background-image: url(../image/grass.jpg);
+  background-image: url(../../image/grass.jpg);
   font-family: 'Merriweather', Arial, sans-serif;
   font-size: 18px;
   line-height: 1.3;

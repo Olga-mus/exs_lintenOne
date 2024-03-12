@@ -3,66 +3,28 @@ const inputPasswordPlayer = document.querySelector('.password');
 const btnEnterPlayer = document.querySelector('.form__text_btn');
 const section1 = document.querySelector('.name-player');
 const btnTaskNote = document.querySelector('.btn-note');
-const btnsListenNote = document.querySelectorAll('.btn_butterfly');
+const btnsListenNote = document.querySelectorAll('.btn_ball');
 const btnsAnswerRight = document.querySelectorAll('.btn_answer');
 const btnReset = document.querySelector('.reset');
 const btnCheck = document.querySelector('.check');
 const textLeo = document.querySelector('.leo__text');
 const notes = document.querySelectorAll('.note');
 
-//открытие пароля (по глазику)
-document
-  .querySelector('.form__btn-password')
-  .addEventListener('click', function (e) {
-    e.preventDefault();
-    console.log(e.target);
-    const input = document.querySelector('.password');
-    if (input.type === 'password') {
-      input.type = 'text';
-      e.target.style.backgroundImage = "url('./image/show.png')";
-    } else {
-      input.type = 'password';
-      e.target.style.backgroundImage = "url('./image/close.png')";
-    }
-  });
-
-//вводим данные и пароль, переходим на главную страницу
-btnEnterPlayer.addEventListener('click', function () {
-  inputPasswordPlayer.value.toLowerCase();
-  const name = inputNamePlayer.value;
-  const firstLetterName = name.slice(0, 1).toUpperCase();
-  const lettersName = name.slice(1).toLowerCase();
-  let nameLetters = [];
-  nameLetters.push(firstLetterName, lettersName);
-  const fullName = nameLetters.join('');
-  if (inputPasswordPlayer.value === 'скрипка') {
-    document.querySelector('.name-player').classList.add('hidden');
-    document.querySelector('.main').classList.remove('hidden');
-    document.querySelector(
-      '.leo__text'
-    ).textContent = `Привет, ${fullName}! Рад видеть тебя! Сегодня у нас удивительное приключение в
-    мире
-    звуков! Начнем?`;
-    setTimeout(function () {
-      document.querySelector(
-        '.leo__text'
-      ).textContent = `Выполни задание. Когда догадаешься, какая бабочка села на цветок - жми на кнопку "ПРОВЕРИТЬ" 😉`;
-    }, 8000);
-  } else {
-    const popup = document.querySelector('.form__popup');
-    popup.classList.remove('hidden');
-    setTimeout(function () {
-      popup.classList.add('hidden');
-    }, 2000);
-  }
-});
+document.querySelector(
+  '.leo__text'
+).textContent = `Сегодня такой замечательный день, чтобы поиграть во что-нибудь веселое. Вперед!`;
+setTimeout(function () {
+  document.querySelector(
+    '.leo__text'
+  ).textContent = `Выполни задание. Когда догадаешься, с каким мячиком я играю - жми на кнопку "ПРОВЕРИТЬ" 😉`;
+}, 8000);
 
 //массив из нот для выбора ответа
-const notesVariantAnswer = Array.from([notes[0], notes[2], notes[4]]); //ноты до ре ми
+const notesVariantAnswer = Array.from([notes[2], notes[4], notes[5]]); //ноты ре ми фа
 
 //нажимаем на кнопку с заданием
 btnTaskNote.addEventListener('click', function (e) {
-  notesVariantAnswer[0].play(); //нота до
+  notesVariantAnswer[1].play();
 });
 
 const num = [0, 1, 2];
@@ -75,10 +37,10 @@ function renderRandomImage() {
     .map(
       (image) =>
         ` <div class="btn_sound">
-                        <button type="button" class="btn_butterfly btn_butterfly_${image}" data-butterfly="${image}"></button>
-                        <label> 
+                        <button type="button" class="btn_ball btn_ball_${image}" data-ball="${image}"></button>
+                        <label>
                         ЖМИ
-                        <input type="radio" name="answer" value="answer" class="btn_answer btn_answer_${image}" data-answer=${image}>  
+                        <input type="radio" name="answer" value="answer" class="btn_answer btn_answer_${image}" data-answer=${image}>
                       <span class="btn_custom"></span>
                         </label>
                     </div>
@@ -88,17 +50,17 @@ function renderRandomImage() {
   document.querySelector('.btns').insertAdjacentHTML('afterbegin', randomImage);
 
   document.querySelector('.btns').addEventListener('click', function (e) {
-    if (e.target.classList.contains('btn_butterfly')) {
+    if (e.target.classList.contains('btn_ball')) {
       console.log('e.target', e.target);
-      const butterfly = e.target.getAttribute('data-butterfly');
-      const notesVariantAnswer = [notes[0], notes[2], notes[4]]; //как в 40 строке
+      const ball = e.target.getAttribute('data-ball');
+      const notesVariantAnswer = [notes[2], notes[4], notes[5]];
       //связываем кнопку с аудио
       Array.from(document.querySelector('.btns').children).forEach(function (
         el,
         i
       ) {
         console.log(el);
-        if (butterfly == i) {
+        if (ball == i) {
           notesVariantAnswer[i].play();
         }
       });
@@ -117,9 +79,7 @@ function renderRandomImage() {
       // e.target.classList.toggle('answer');
       let letter = [];
       //ответ верный
-
-      // - 0 это нота до строка 44
-      if (e.target.getAttribute('data-answer') != 0) {
+      if (e.target.getAttribute('data-answer') != 1) {
         console.log(e.target.getAttribute('data-answer'));
         letter.push('б');
         console.log(letter);
@@ -147,6 +107,7 @@ function renderRandomImage() {
           function playNote(e) {
             let key = e.target;
             let note = document.getElementById(key.dataset.note);
+            console.log(note);
             key.classList.add('active');
             //время текущей ноты если нота окажется длинной
             note.currentTime = 0;

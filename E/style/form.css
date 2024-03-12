@@ -1,5 +1,5 @@
-/*C*/
-@import '../vendor/fonts/fonts.css';
+/*D*/
+@import '../../vendor/fonts/fonts.css';
 
 /* * {
   outline: 1px solid red;
@@ -16,7 +16,7 @@ button:hover {
 }
 
 body {
-  background-image: url(../image/grass.jpg);
+  background-image: url(../../image/grass.jpg);
   font-family: 'Merriweather', Arial, sans-serif;
   font-size: 18px;
   line-height: 1.3;
@@ -65,7 +65,6 @@ body {
   text-align: center;
   border-radius: 10px;
   height: 40px;
-  width: 100%;
 }
 
 .form__text_btn {
@@ -87,45 +86,6 @@ body {
   box-shadow: 3px 3px 20px black;
   width: 590px;
   border-radius: 10px;
-  position: relative;
-}
-
-/*попап неверный пароль*/
-.form__popup {
-  position: absolute;
-  border: 2px solid black;
-  border-radius: 10px;
-  width: 266px;
-  height: 56px;
-  padding: 0;
-  background-color: aliceblue;
-  bottom: 110px;
-  left: 162px;
-}
-
-.form__popup_text {
-  font-size: 20px;
-  line-height: 1;
-  font-weight: 700;
-  overflow: hidden;
-  text-align: center;
-  padding: 0;
-}
-
-.form__btn-password {
-  background-image: url(../image/close.png);
-  width: 30px;
-  height: 30px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 6px;
-  left: 370px;
-  box-shadow: none;
-}
-
-.form__password-wrap {
-  position: relative;
 }
 
 @media screen and (max-width: 1160px) {
@@ -167,10 +127,6 @@ body {
   .form__text {
     width: 324px;
   }
-
-  .form__btn-password {
-    left: 294px;
-  }
 }
 
 @media screen and (max-width: 660px) {
@@ -206,13 +162,6 @@ body {
   .form__text {
     width: 290px;
     padding: 0 10px;
-  }
-
-  .form__btn-password {
-    left: 266px;
-    width: 26px;
-    height: 26px;
-    top: 10px;
   }
 }
 

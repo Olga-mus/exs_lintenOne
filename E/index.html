@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лео</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/form.css">
+    <link rel="stylesheet" href="./style/error.css">
+    <link rel="stylesheet" href="./style/right.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="../image/favicon.png">
+    <link rel="stylesheet" href="../../vendor/normalize.css">
+
+</head>
+
+<body>
+
+
+    <div class="main">
+        <h1 class="title">Жми на кнопку 🎵, слушай и запоминай звук. Найди такой же звук, нажамая на мячики</h1>
+        <div class="game">
+            <div class="leo">
+                <div class="leo__answer">
+                    <div class="leo__window">
+                        <p class="leo__text"></p>
+                    </div>
+
+                </div>
+                <img src="../image/leo.png" alt="картинка льва" class="leo__img">
+
+            </div>
+            <div class="task">
+                <button type="button" class="btn-note" data-task="0"></button>
+                <div class="btns">
+                    <!-- <div class="btn_sound">
+                            <button type="button" class="btn_ball" data-ball="0"></button>
+                            <button type="button" class="btn_answer"></button>
+                        </div>
+                        <div class="btn_sound">
+                            <button type="button" class="btn_ball" data-ball="1"></button>
+                            <button type="button" class="btn_answer"></button>
+                        </div>
+                        <div class="btn_sound">
+                            <button type="button" class="btn_ball" data-ball="2"></button>
+                            <button type="button" class="btn_answer"></button>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <button type="button" class="nav__btn check disabled" disabled="true">Проверить</button>
+        </div>
+    </div>
+    <div class="wrong-answer hidden">
+        <div class="wrong-answer__leo">
+            <div class="wrong-answer__leo-img">
+
+                <img src="../image/leo_sad.png" alt="" class="wrong-answer__leo-img">
+
+                <div class="wrong-answer__wrapper">
+                    <div class="wrong-answer__window">
+                        <p class="wrong-answer__leo-text">Я поймал не этот мячик... Попробуй еще раз. Жми на кнопку
+                            "Начать
+                            сначала"
+                        </p>
+                    </div>
+                </div>
+
+                <button type="button" class="wrong-answer__btn nav__btn reset">Начать сначала</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="answer hidden">
+        <h1 class="title-answer">Здорово! Ты верно отгадал звучащую нотку. А сейчас попробуй поиграть эту ноту
+            на
+            клавиатуре</h1>
+        <section>
+            <div class="note-line">
+                <img src="../image/leo.png" alt="картинка льва" class="leo__img-result">
+                <img class="keys__note" src="../image/e.jpg" alt="нота ре">
+            </div>
+            <p class="keys__title">Нота Ми пишется на первой линеечке</p>
+
+            <div class="piano">
+                <div class="key key-w" data-note="C">ДО</div>
+                <div class="key key-b" data-note="Cs"></div>
+                <div class="key key-w" data-note="D">РЕ</div>
+                <div class="key key-b" data-note="Ds"></div>
+                <div class="key key-w player" data-note="E">МИ</div>
+                <div class="key key-w" data-note="F">ФА</div>
+                <div class="key key-b" data-note="Fs"></div>
+                <div class="key key-w" data-note="G">СОЛЬ</div>
+                <div class="key key-b" data-note="Gs"></div>
+                <div class="key key-w" data-note="A">ЛЯ</div>
+                <div class="key key-b" data-note="As"></div>
+                <div class="key key-w" data-note="B">СИ</div>
+            </div>
+
+            <a href="../D/index.html">НАЗАД</a>
+            <a href="#">ПРОДОЛЖИТЬ</a>
+
+            <audio id="C" class="play-0 note" data-key="65" src="../audio/note-001.mp3"></audio>
+            <audio id="Cs" class="play-1 note" data-key="87" src="../audio/note-002.mp3"></audio>
+            <audio id="D" class="play-2 note" data-key="83" src="../audio/note-003.mp3"></audio>
+            <audio id="Ds" class="play-3 note" data-key="69" src="../audio/note-004.mp3"></audio>
+            <audio id="E" class="play-4 note" data-key="68" src="../audio/note-005.mp3"></audio>
+            <audio id="F" class="play-5 note" data-key="70" src="../audio/note-006.mp3"></audio>
+            <audio id="Fs" class="play-6 note" data-key="84" src="../audio/note-007.mp3"></audio>
+            <audio id="G" class="play-7 note" data-key="71" src="../audio/note-008.mp3"></audio>
+            <audio id="Gs" class="play-8 note" data-key="89" src="../audio/note-009.mp3"></audio>
+            <audio id="A" class="play-9 note" data-key="72" src="../audio/note-010.mp3"></audio>
+            <audio id="As" class="play-10 note" data-key="85" src="../audio/note-011.mp3"></audio>
+            <audio id="B" class="play-11 note" data-key="74" src="../audio/note-012.mp3"></audio>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./style/right.css">
     <link type="image/png" sizes="16x16" rel="icon" href="./image/favicon.png">
     <link rel="stylesheet" href="./vendor/normalize.css">
+
 </head>
 
 <body>
@@ -21,15 +22,26 @@
                 <h2 class="form__title">Я тигренок Лео. Давай знакомиться😀</h2>
                 <form class="form__text">
                     <label for="name" class="form__text_title">Как тебя зовут?</label>
-                    <input type="text" id="name" name="name" placeholder="Введи свое имя" class="form__text_input text">
+                    <input type="text" maxlength="12" required id="name" name="name" placeholder="Введи свое имя"
+                        class="form__text_input text">
 
                     <label for="password" class="form__text_title">Пароль</label>
-                    <input type="text" id="password" name="password" placeholder="Введи пароль"
-                        class="form__text_input password">
+
+                    <div class="form__password-wrap">
+                        <input type="password" id="password" name="password" minlength="7" required
+                            placeholder="Введи пароль" class="form__text_input password">
+                        <button class="form__btn-password"></button>
+                    </div>
+
                     <input type="button" value="ЖМИ" class="form__text_btn">
                 </form>
+                <!-- окно неверного пароля -->
+                <div class="form__popup hidden">
+                    <p class="form__popup_text">Пароль введен неверно</p>
+                </div>
             </div>
         </div>
+
     </div>
 
     <div class="main hidden">
@@ -68,7 +80,7 @@
         </div>
     </div>
 
-    </div>
+
 
     <div class="wrong-answer hidden">
         <div class="wrong-answer__leo">
@@ -116,42 +128,23 @@
                 <div class="key key-b" data-note="As"></div>
                 <div class="key key-w" data-note="B">СИ</div>
             </div>
-
+            <a href="index.html">СНАЧАЛА</a>
+            <a href="./D/index.html">ПРОДОЛЖИТЬ</a>
 
 
             <!-- аудиофайлы, каждый из них отвечает за свою ноту -->
-            <!-- <audio class="play-0 note" data-key="65" src="./audio/040.mp3"></audio>
-            <audio class="play-1 note" data-key="87" src="./audio/041.mp3"></audio>
-            <audio class="play-2 note" data-key="83" src="./audio/042.mp3"></audio>
-            <audio class="play-3 note" data-key="69" src="./audio/043.mp3"></audio>
-            <audio class="play-4 note" data-key="68" src="./audio/044.mp3"></audio>
-            <audio class="play-5 note" data-key="70" src="./audio/045.mp3"></audio>
-            <audio class="play-6 note" data-key="84" src="./audio/046.mp3"></audio>
-            <audio class="play-7 note" data-key="71" src="./audio/047.mp3"></audio>
-            <audio class="play-8 note" data-key="89" src="./audio/048.mp3"></audio>
-            <audio class="play-9 note" data-key="72" src="./audio/049.mp3"></audio>
-            <audio class="play-10 note" data-key="85" src="./audio/050.mp3"></audio>
-            <audio class="play-11 note" data-key="74" src="./audio/051.mp3"></audio>
-            <audio class="play-12 note" data-key="75" src="./audio/052.mp3"></audio>
-            <audio class="play-13 note" data-key="79" src="./audio/053.mp3"></audio>
-            <audio class="play-14 note" data-key="76" src="./audio/054.mp3"></audio>
-            <audio class="play-15 note" data-key="80" src="./audio/055.mp3"></audio>
-            <audio class="play-16 note" data-key="186" src="./audio/056.mp3"></audio> -->
-
-
-
-            <audio id="C" class="play-0 note" data-key="65" src="./audio/note/note-001.mp3"></audio>
-            <audio id="Cs" class="play-1 note" data-key="87" src="./audio/note/note-002.mp3"></audio>
-            <audio id="D" class="play-2 note" data-key="83" src="./audio/note/note-003.mp3"></audio>
-            <audio id="Ds" class="play-3 note" data-key="69" src="./audio/note/note-004.mp3"></audio>
-            <audio id="E" class="play-4 note" data-key="68" src="./audio/note/note-005.mp3"></audio>
-            <audio id="F" class="play-5 note" data-key="70" src="./audio/note/note-006.mp3"></audio>
-            <audio id="Fs" class="play-6 note" data-key="84" src="./audio/note/note-007.mp3"></audio>
-            <audio id="G" class="play-7 note" data-key="71" src="./audio/note/note-008.mp3"></audio>
-            <audio id="Gs" class="play-8 note" data-key="89" src="./audio/note/note-009.mp3"></audio>
-            <audio id="A" class="play-9 note" data-key="72" src="./audio/note/note-010.mp3"></audio>
-            <audio id="As" class="play-10 note" data-key="85" src="./audio/note/note-011.mp3"></audio>
-            <audio id="B" class="play-11 note" data-key="74" src="./audio/note/note-012.mp3"></audio>
+            <audio id="C" class="play-0 note" data-key="65" src="./audio/note-001.mp3"></audio>
+            <audio id="Cs" class="play-1 note" data-key="87" src="./audio/note-002.mp3"></audio>
+            <audio id="D" class="play-2 note" data-key="83" src="./audio/note-003.mp3"></audio>
+            <audio id="Ds" class="play-3 note" data-key="69" src="./audio/note-004.mp3"></audio>
+            <audio id="E" class="play-4 note" data-key="68" src="./audio/note-005.mp3"></audio>
+            <audio id="F" class="play-5 note" data-key="70" src="./audio/note-006.mp3"></audio>
+            <audio id="Fs" class="play-6 note" data-key="84" src="./audio/note-007.mp3"></audio>
+            <audio id="G" class="play-7 note" data-key="71" src="./audio/note-008.mp3"></audio>
+            <audio id="Gs" class="play-8 note" data-key="89" src="./audio/note-009.mp3"></audio>
+            <audio id="A" class="play-9 note" data-key="72" src="./audio/note-010.mp3"></audio>
+            <audio id="As" class="play-10 note" data-key="85" src="./audio/note-011.mp3"></audio>
+            <audio id="B" class="play-11 note" data-key="74" src="./audio/note-012.mp3"></audio>
         </section>
     </div>
 
