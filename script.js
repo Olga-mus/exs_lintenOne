@@ -52,7 +52,7 @@ btnEnterPlayer.addEventListener('click', function () {
       document.querySelector(
         '.leo__text'
       ).textContent = `Выполни задание. Когда догадаешься, какая бабочка села на цветок - жми на кнопку "ПРОВЕРИТЬ" 😉`;
-    }, 10000);
+    }, 13000);
   } else {
     //попап с неверным паролем
     const popup = document.querySelector('.form__popup');
