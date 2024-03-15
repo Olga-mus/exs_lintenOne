@@ -40,40 +40,6 @@ body {
   margin-top: 120px;
 }
 
-.leo__window {
-  /* width: 490px;
-  position: absolute;
-  top: -90px;
-  left: 290px; */
-  background-image: url(../../image/answer_right.png);
-  width: 450px;
-  height: 300px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-.leo__img {
-  width: 366px;
-}
-
-.leo__text {
-  position: absolute;
-  width: 300px;
-  top: 38px;
-  left: 56px;
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: center;
-  user-select: none;
-}
-
-.leo__answer {
-  position: absolute;
-  top: -132px;
-  left: 256px;
-}
-
 .game {
   display: flex;
   justify-content: space-between;
