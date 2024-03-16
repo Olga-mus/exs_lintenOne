@@ -1,4 +1,4 @@
-/*EX1*/
+/*G*/
 @import '../../vendor/fonts/fonts.css';
 
 /* * {
@@ -31,15 +31,15 @@ body {
   display: none;
 }
 
-.note {
+.note-line {
   display: flex;
-  max-width: 872px;
+  max-width: 614px;
   justify-content: space-between;
-  margin: 166px auto 0;
-  height: 166px;
+  margin: 10px auto 0;
+  height: 232px;
 }
 
-.note__answer_img {
+.leo__img-result {
   height: 100%;
 }
 
@@ -52,9 +52,9 @@ body {
   user-select: none;
 }
 
-.note__ex {
+.keys__note {
   display: block;
-  /* margin: auto; */
+  margin: auto;
   height: 100%;
 }
 
@@ -69,46 +69,12 @@ body {
   padding: 0 10px;
 }
 
-.note__answer {
-  position: relative;
-}
-
-.note__leo_window {
-  /* width: 490px;
-  position: absolute;
-  top: -90px;
-  left: 290px; */
-  background-image: url(../../image/answer_right.png);
-  width: 450px;
-  height: 300px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-.note__leo_text {
-  position: absolute;
-  width: 300px;
-  top: 38px;
-  left: 56px;
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: center;
-  user-select: none;
-}
-
-.note__leo {
-  position: absolute;
-  top: -180px;
-  left: 100px;
-}
-
 /*пианино*/
 
 .piano {
   width: 700px;
   height: 400px;
-  margin: 10px auto;
+  margin: 50px auto;
   display: flex;
 }
 
@@ -150,28 +116,19 @@ body {
   border: 2px solid #f1ed29;
 }
 
+.player {
+  background-color: #eb3d7f;
+}
+
 .link {
   font-size: 16px;
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
 }
 
 .link__text {
   color: white;
   text-decoration: none;
-}
-
-.red {
-  background-color: #ec0322;
-}
-
-.orange {
-  background-color: #fe7c28;
-}
-
-.yellow {
-  background-color: #feeb16;
 }
 
 @media screen and (max-width: 1440px) {
@@ -192,11 +149,6 @@ body {
   .keys {
     max-width: 790px;
   }
-
-  .note {
-    height: 110px;
-    max-width: 700px;
-  }
 }
 
 @media screen and (max-width: 850px) {
@@ -206,10 +158,6 @@ body {
 
   .title-answer {
     max-width: 670px;
-  }
-
-  .title-answer {
-    text-align: center;
   }
 
   /* .piano {
@@ -235,31 +183,16 @@ body {
     margin-left: -23px;
     margin-right: -23px;
   }
-
-  .note {
-    max-width: 574px;
-  }
 }
 
 @media screen and (max-width: 690px) {
   .title-answer {
+    max-width: 530px;
     font-size: 22px;
   }
 
-  .note {
+  .note-line {
     max-width: 530px;
-    height: 100px;
-  }
-
-  .note__leo_text {
-    font-size: 14px;
-    width: 180px;
-    top: 34px;
-    left: 66px;
-  }
-
-  .note__leo_window {
-    width: 314px;
   }
 }
 
@@ -282,11 +215,11 @@ body {
 }
 
 @media screen and (max-width: 550px) {
-  .note {
-    height: 90px;
+  .note-line {
+    height: 132px;
   }
 
-  .note__ex {
+  .keys__note {
     margin: 0;
   }
 
@@ -299,23 +232,9 @@ body {
     font-size: 14px;
     text-align: center;
   }
-
-  .note__leo {
-    left: 42px;
-    top: -156px;
-  }
-
-  .note__leo_text {
-    font-size: 12px;
-    left: 50px;
-  }
-
-  .note__leo_window {
-    width: 270px;
-  }
 }
 
-/* @media screen and (max-width: 513px) {
+@media screen and (max-width: 513px) {
   .piano {
     width: 360px;
     height: 234px;
@@ -331,7 +250,7 @@ body {
     margin-left: -15px;
     margin-right: -15px;
   }
-} */
+}
 
 @media screen and (max-width: 513px) {
   .piano {
@@ -349,24 +268,5 @@ body {
     width: 26px;
     margin-left: -13px;
     margin-right: -13px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .note {
-    height: 70px;
-    max-width: 406px;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .note {
-    height: 56px;
-    max-width: 300px;
-    margin-top: 152px;
-  }
-
-  .title-answer {
-    font-size: 12px;
   }
 }

@@ -1,4 +1,4 @@
-/*D*/
+/*G*/
 @import '../../vendor/fonts/fonts.css';
 
 /* * {
@@ -40,6 +40,40 @@ body {
   margin-top: 120px;
 }
 
+.leo__window {
+  /* width: 490px;
+  position: absolute;
+  top: -90px;
+  left: 290px; */
+  background-image: url(../../image/answer_right.png);
+  width: 450px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.leo__img {
+  width: 366px;
+}
+
+.leo__text {
+  position: absolute;
+  width: 280px;
+  top: 38px;
+  left: 56px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  user-select: none;
+}
+
+.leo__answer {
+  position: absolute;
+  top: -132px;
+  left: 256px;
+}
+
 .game {
   display: flex;
   justify-content: space-between;
@@ -58,15 +92,15 @@ body {
   margin-bottom: 58px;
 }
 
-.btn_chamomile {
+.btn_strawberries {
   width: 200px;
   height: 200px;
-  background-image: url(../../image/chamomile.png);
-  background-size: 180px;
+  background-image: url(../../image/strawberries.png);
+  background-size: contain;
   background-repeat: no-repeat;
   border-radius: 50%;
   background-position: center;
-  background-color: #e9e657;
+  background-color: #eeb6c4fa;
   margin-bottom: 20px;
 }
 
@@ -142,7 +176,7 @@ body {
 }
 
 .btn_custom::before {
-  background-image: url(../../image/bug.png);
+  background-image: url(../../image/leo_strawberries.png);
   content: '';
   width: 100px;
   height: 100px;
@@ -208,17 +242,17 @@ label {
     max-width: 930px;
   }
 
-  .btn_chamomile {
+  .btn_strawberries {
     width: 190px;
     height: 190px;
-    background-size: 160px;
+    /* background-size: 160px; */
   }
 
   .leo__window {
     width: 444px;
   }
 
-  .btn_chamomile {
+  .btn_strawberries {
     width: 180px;
     height: 180px;
   }
@@ -270,7 +304,7 @@ label {
     font-size: 32px;
   }
 
-  .btn_chamomile {
+  .btn_strawberries {
     width: 160px;
     height: 160px;
   }
@@ -279,10 +313,10 @@ label {
     width: 290px;
   }
 
-  .btn_chamomile {
+  .btn_strawberries {
     width: 160px;
     height: 160px;
-    background-size: 140px;
+    /* background-size: 140px; */
   }
 
   .btn-note {
@@ -309,6 +343,7 @@ label {
 
   .leo__text {
     font-size: 16px;
+    top: 46px;
   }
 
   .nav {
@@ -317,10 +352,10 @@ label {
 }
 
 @media screen and (max-width: 846px) {
-  .btn_chamomile {
+  .btn_strawberries {
     width: 140px;
     height: 140px;
-    background-size: 120px;
+    /* background-size: 120px; */
   }
 
   .btn_custom,
@@ -344,8 +379,9 @@ label {
   }
 
   .leo__text {
-    left: 36px;
+    left: 42px;
     top: 38px;
+    font-size: 14px;
   }
 
   .leo__img {
@@ -379,10 +415,10 @@ label {
 }
 
 @media screen and (max-width: 480px) {
-  .btn_chamomile {
+  .btn_strawberries {
     width: 100px;
     height: 100px;
-    background-size: 80px;
+    /* background-size: 80px; */
   }
 
   .btn_custom,
@@ -424,10 +460,10 @@ label {
     width: 270px;
   }
 
-  .btn_chamomile {
+  .btn_strawberries {
     width: 80px;
     height: 80px;
-    background-size: 60px;
+    /* background-size: 60px; */
   }
 
   .btn-note {
@@ -463,7 +499,7 @@ label {
     font-size: 20px;
   }
 
-  .btn_chamomile {
+  .btn_strawberries {
     margin-bottom: 0;
   }
 

@@ -1,4 +1,4 @@
-// Ex1
+// Ex2
 
 //звуки пианино
 let keys = document.querySelectorAll('.key');

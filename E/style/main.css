@@ -343,6 +343,8 @@ label {
 
   .leo__text {
     font-size: 16px;
+    width: 250px;
+    left: 76px;
   }
 
   .nav {
@@ -378,7 +380,7 @@ label {
   }
 
   .leo__text {
-    left: 36px;
+    left: 60px;
     top: 38px;
   }
 

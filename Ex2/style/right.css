@@ -1,4 +1,4 @@
-/*EX1*/
+/*EX2*/
 @import '../../vendor/fonts/fonts.css';
 
 /* * {
@@ -174,6 +174,14 @@ body {
   background-color: #feeb16;
 }
 
+.green {
+  background-color: #2ea95c;
+}
+
+.blue {
+  background-color: #20a1e1;
+}
+
 @media screen and (max-width: 1440px) {
   .title-answer {
     max-width: 1090px;
@@ -188,7 +196,7 @@ body {
   }
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 930px) {
   .keys {
     max-width: 790px;
   }
@@ -239,6 +247,10 @@ body {
   .note {
     max-width: 574px;
   }
+
+  .note__leo {
+    left: 6px;
+  }
 }
 
 @media screen and (max-width: 690px) {
@@ -253,7 +265,7 @@ body {
 
   .note__leo_text {
     font-size: 14px;
-    width: 180px;
+    width: 198px;
     top: 34px;
     left: 66px;
   }
@@ -308,6 +320,7 @@ body {
   .note__leo_text {
     font-size: 12px;
     left: 50px;
+    width: 178px;
   }
 
   .note__leo_window {
