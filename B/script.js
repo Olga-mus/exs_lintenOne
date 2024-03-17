@@ -12,7 +12,7 @@ const notes = document.querySelectorAll('.note');
 
 document.querySelector(
   '.leo__text'
-).textContent = `Что же это такое упало с неба? Ого, это же воздушный шарик. Может, я научуть летать?`;
+).textContent = `Что же это такое упало с неба? Ого, это же воздушный шарик. Может, я научуcь летать?`;
 setTimeout(function () {
   document.querySelector(
     '.leo__text'

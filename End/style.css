@@ -1,8 +1,8 @@
 /*End*/
-@import '../../vendor/fonts/fonts.css';
+@import '../vendor/fonts/fonts.css';
 
 body {
-  background-image: url(../../image/grass.jpg);
+  background-image: url(../image/grass.jpg);
   font-family: 'Merriweather', Arial, sans-serif;
   font-size: 18px;
   line-height: 1.3;
