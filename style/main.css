@@ -34,7 +34,7 @@ body {
 }
 
 .title__btn {
-  background-image: url(../../image/button.png);
+  background-image: url(./image/button.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 30px;
