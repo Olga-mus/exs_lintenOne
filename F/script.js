@@ -20,7 +20,7 @@ setTimeout(function () {
 }, 6000);
 
 //массив из нот для выбора ответа
-const notesVariantAnswer = Array.from([notes[4], notes[5], notes[7]]); //ноты ре ми фа
+const notesVariantAnswer = Array.from([notes[4], notes[5], notes[7]]); //ноты ми фа соль
 
 //нажимаем на кнопку с заданием
 btnTaskNote.addEventListener('click', function (e) {

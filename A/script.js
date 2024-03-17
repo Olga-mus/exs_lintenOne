@@ -3,7 +3,7 @@ const inputPasswordPlayer = document.querySelector('.password');
 const btnEnterPlayer = document.querySelector('.form__text_btn');
 const section1 = document.querySelector('.name-player');
 const btnTaskNote = document.querySelector('.btn-note');
-const btnsListenNote = document.querySelectorAll('.btn_strawberries');
+const btnsListenNote = document.querySelectorAll('.btn_bird');
 const btnsAnswerRight = document.querySelectorAll('.btn_answer');
 const btnReset = document.querySelector('.reset');
 const btnCheck = document.querySelector('.check');
@@ -12,15 +12,15 @@ const notes = document.querySelectorAll('.note');
 
 document.querySelector(
   '.leo__text'
-).textContent = `Откуда такой сладкий, нежный и свежий аромат? Это точно из кустарника... Надо исследовать зеленую чащу.`;
+).textContent = `Кто же это так красиво поет? Подойду поближе.`;
 setTimeout(function () {
   document.querySelector(
     '.leo__text'
-  ).textContent = `Выполни задание. Когда догадаешься, какая клубничка оказалась самая вкусная - жми на кнопку "ПРОВЕРИТЬ"`;
-}, 6000);
+  ).textContent = `Выполни задание. Когда догадаешься, с какой птичкой я подружился - жми на кнопку "ПРОВЕРИТЬ"`;
+}, 4000);
 
 //массив из нот для выбора ответа
-const notesVariantAnswer = Array.from([notes[5], notes[7], notes[9]]); //ноты фа соль ля
+const notesVariantAnswer = Array.from([notes[7], notes[9], notes[11]]); //ноты соль ля си
 
 //нажимаем на кнопку с заданием
 btnTaskNote.addEventListener('click', function (e) {
@@ -37,7 +37,7 @@ function renderRandomImage() {
     .map(
       (image) =>
         ` <div class="btn_sound">
-                        <button type="button" class="btn_strawberries btn_strawberries_${image}" data-strawberries="${image}"></button>
+                        <button type="button" class="btn_bird btn_bird_${image}" data-bird="${image}"></button>
                         <label>
                         ЖМИ
                         <input type="radio" name="answer" value="answer" class="btn_answer btn_answer_${image}" data-answer=${image}>
@@ -50,17 +50,17 @@ function renderRandomImage() {
   document.querySelector('.btns').insertAdjacentHTML('afterbegin', randomImage);
 
   document.querySelector('.btns').addEventListener('click', function (e) {
-    if (e.target.classList.contains('btn_strawberries')) {
+    if (e.target.classList.contains('btn_bird')) {
       console.log('e.target', e.target);
-      const strawberries = e.target.getAttribute('data-strawberries');
-      const notesVariantAnswer = [notes[5], notes[7], notes[9]];
+      const bird = e.target.getAttribute('data-bird');
+      const notesVariantAnswer = [notes[7], notes[9], notes[11]];
       //связываем кнопку с аудио
       Array.from(document.querySelector('.btns').children).forEach(function (
         el,
         i
       ) {
         console.log(el);
-        if (strawberries == i) {
+        if (bird == i) {
           notesVariantAnswer[i].play();
         }
       });
