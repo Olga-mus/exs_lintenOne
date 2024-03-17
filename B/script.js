@@ -24,7 +24,7 @@ const notesVariantAnswer = Array.from([notes[7], notes[9], notes[11]]); //нот
 
 //нажимаем на кнопку с заданием
 btnTaskNote.addEventListener('click', function (e) {
-  notesVariantAnswer[1].play();
+  notesVariantAnswer[2].play();
 });
 
 const num = [0, 1, 2];
@@ -79,7 +79,7 @@ function renderRandomImage() {
       // e.target.classList.toggle('answer');
       let letter = [];
       //ответ верный
-      if (e.target.getAttribute('data-answer') != 1) {
+      if (e.target.getAttribute('data-answer') != 2) {
         console.log(e.target.getAttribute('data-answer'));
         letter.push('б');
         console.log(letter);
