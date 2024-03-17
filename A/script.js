@@ -17,7 +17,7 @@ setTimeout(function () {
   document.querySelector(
     '.leo__text'
   ).textContent = `Выполни задание. Когда догадаешься, с какой птичкой я подружился - жми на кнопку "ПРОВЕРИТЬ"`;
-}, 4000);
+}, 5000);
 
 //массив из нот для выбора ответа
 const notesVariantAnswer = Array.from([notes[7], notes[9], notes[11]]); //ноты соль ля си
