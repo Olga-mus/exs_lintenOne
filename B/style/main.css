@@ -1,4 +1,4 @@
-/*A*/
+/*B*/
 @import '../../vendor/fonts/fonts.css';
 
 /* * {
@@ -124,15 +124,15 @@ body {
   margin-bottom: 58px;
 }
 
-.btn_bird {
+.btn_balloon {
   width: 200px;
   height: 200px;
-  background-image: url(../../image/bird.png);
+  background-image: url(../../image/balloon.png);
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 50%;
   background-position: center;
-  background-color: #f3a917;
+  background-color: #acecfcfa;
   margin-bottom: 20px;
 }
 
@@ -208,7 +208,7 @@ body {
 }
 
 .btn_custom::before {
-  background-image: url(../../image/leo_bird.png);
+  background-image: url(../../image/leo_balloon.png);
   content: '';
   width: 100px;
   height: 100px;
@@ -274,7 +274,7 @@ label {
     max-width: 930px;
   }
 
-  .btn_bird {
+  .btn_balloon {
     width: 190px;
     height: 190px;
     /* background-size: 160px; */
@@ -284,7 +284,7 @@ label {
     width: 444px;
   }
 
-  .btn_bird {
+  .btn_balloon {
     width: 180px;
     height: 180px;
   }
@@ -336,7 +336,7 @@ label {
     font-size: 32px;
   }
 
-  .btn_bird {
+  .btn_balloon {
     width: 160px;
     height: 160px;
   }
@@ -345,7 +345,7 @@ label {
     width: 290px;
   }
 
-  .btn_bird {
+  .btn_balloon {
     width: 160px;
     height: 160px;
     /* background-size: 140px; */
@@ -384,7 +384,7 @@ label {
 }
 
 @media screen and (max-width: 846px) {
-  .btn_bird {
+  .btn_balloon {
     width: 140px;
     height: 140px;
     /* background-size: 120px; */
@@ -447,7 +447,7 @@ label {
 }
 
 @media screen and (max-width: 480px) {
-  .btn_bird {
+  .btn_balloon {
     width: 100px;
     height: 100px;
     /* background-size: 80px; */
@@ -492,7 +492,7 @@ label {
     width: 270px;
   }
 
-  .btn_bird {
+  .btn_balloon {
     width: 80px;
     height: 80px;
     /* background-size: 60px; */
@@ -527,7 +527,7 @@ label {
     margin-bottom: 6px;
   }
 
-  .btn_bird {
+  .btn_balloon {
     margin-bottom: 0;
   }
 
