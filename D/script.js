@@ -24,6 +24,7 @@ const notesVariantAnswer = Array.from([notes[0], notes[2], notes[4]]); // нот
 
 //нажимаем на кнопку с заданием
 btnTaskNote.addEventListener('click', function (e) {
+  notesVariantAnswer[1].currentTime = 0;
   notesVariantAnswer[1].play(); //ноты ре
 });
 
@@ -61,6 +62,7 @@ function renderRandomImage() {
       ) {
         console.log(el);
         if (chamomile == i) {
+          notesVariantAnswer[i].currentTime = 0;
           notesVariantAnswer[i].play();
         }
       });

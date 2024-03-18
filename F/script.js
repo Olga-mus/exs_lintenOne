@@ -24,6 +24,7 @@ const notesVariantAnswer = Array.from([notes[4], notes[5], notes[7]]); //нот�
 
 //нажимаем на кнопку с заданием
 btnTaskNote.addEventListener('click', function (e) {
+  notesVariantAnswer[1].currentTime = 0;
   notesVariantAnswer[1].play();
 });
 
@@ -61,6 +62,7 @@ function renderRandomImage() {
       ) {
         console.log(el);
         if (fish == i) {
+          notesVariantAnswer[i].currentTime = 0;
           notesVariantAnswer[i].play();
         }
       });
