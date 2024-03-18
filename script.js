@@ -9,6 +9,7 @@ const btnReset = document.querySelector('.reset');
 const btnCheck = document.querySelector('.check');
 const textLeo = document.querySelector('.leo__text');
 const notes = document.querySelectorAll('.note');
+let letter = [];
 
 //открытие пароля (по глазику)
 document
@@ -121,9 +122,10 @@ function renderRandomImage() {
     //верный ответ или нет
 
     if (e.target.classList.contains('btn_answer')) {
+      letter = [];
       console.log('e.target', e.target);
+      console.log('letter', letter);
       // e.target.classList.toggle('answer');
-      let letter = [];
       //ответ верный
 
       // - 0 это нота до строка 44

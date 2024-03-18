@@ -9,7 +9,7 @@ const btnReset = document.querySelector('.reset');
 const btnCheck = document.querySelector('.check');
 const textLeo = document.querySelector('.leo__text');
 const notes = document.querySelectorAll('.note');
-
+let letter = [];
 document.querySelector(
   '.leo__text'
 ).textContent = `Что же это такое упало с неба? Ого, это же воздушный шарик. Может, я научуcь летать?`;
@@ -79,7 +79,7 @@ function renderRandomImage() {
     if (e.target.classList.contains('btn_answer')) {
       console.log('e.target', e.target);
       // e.target.classList.toggle('answer');
-      let letter = [];
+      letter = [];
       //ответ верный
       if (e.target.getAttribute('data-answer') != 2) {
         console.log(e.target.getAttribute('data-answer'));
