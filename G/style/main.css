@@ -31,42 +31,9 @@ body {
   color: #f4e0f9;
   margin: 0 auto;
   user-select: none;
-}
-
-.title__btn {
-  background-image: url(../../image/button.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 30px;
-  width: 30px;
-}
-
-.title__task {
-  display: flex;
-  padding-top: 10px;
-}
-
-.title__one {
-  width: 123px;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-}
-
-.title__two {
   text-align: center;
+  margin-top: 10px;
 }
-
-.title__flex {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  border: 1px solid white;
-  margin: 0;
-  padding: 0;
-}
-
 .leo {
   position: relative;
   margin-top: 120px;
