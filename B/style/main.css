@@ -125,8 +125,8 @@ body {
 }
 
 .btn_balloon {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background-image: url(../../image/balloon.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -323,11 +323,6 @@ label {
 @media screen and (max-width: 946px) {
   .title {
     font-size: 32px;
-  }
-
-  .btn_balloon {
-    width: 160px;
-    height: 160px;
   }
 
   .leo__img {
