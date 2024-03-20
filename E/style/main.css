@@ -114,21 +114,21 @@ body {
 }
 
 .btn-note {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background-color: #eb3d7f;
-  background-image: url(../../image/note.png);
-  background-size: 90px;
+  background-image: url(../../image/play.svg);
+  background-size: 200px;
   background-repeat: no-repeat;
   margin-bottom: 58px;
 }
 
 .btn_ball {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background-image: url(../../image/ball.png);
-  background-size: 180px;
+  background-size: 130px;
   background-repeat: no-repeat;
   border-radius: 50%;
   background-position: center;
@@ -274,19 +274,8 @@ label {
     max-width: 930px;
   }
 
-  .btn_ball {
-    width: 190px;
-    height: 190px;
-    background-size: 160px;
-  }
-
   .leo__window {
     width: 444px;
-  }
-
-  .btn_ball {
-    width: 180px;
-    height: 180px;
   }
 }
 
@@ -336,23 +325,12 @@ label {
     font-size: 32px;
   }
 
-  .btn_ball {
-    width: 160px;
-    height: 160px;
-  }
-
   .leo__img {
     width: 290px;
   }
 
-  .btn_ball {
-    width: 160px;
-    height: 160px;
-    background-size: 140px;
-  }
-
   .btn-note {
-    margin-left: 70%;
+    margin-left: 62%;
   }
 
   .btn_custom,
@@ -386,9 +364,9 @@ label {
 
 @media screen and (max-width: 846px) {
   .btn_ball {
-    width: 140px;
-    height: 140px;
-    background-size: 120px;
+    width: 100px;
+    height: 100px;
+    background-size: 80px;
   }
 
   .btn_custom,
@@ -403,6 +381,13 @@ label {
 
   .title {
     font-size: 30px;
+  }
+
+  .btn-note {
+    width: 120px;
+    height: 120px;
+    background-size: 120px;
+    margin-left: 70%;
   }
 }
 
@@ -493,15 +478,10 @@ label {
   }
 
   .btn_ball {
-    width: 80px;
-    height: 80px;
-    background-size: 60px;
-  }
-
-  .btn-note {
-    width: 90px;
-    height: 90px;
-    background-size: 80px;
+    width: 70px;
+    height: 70px;
+    background-size: 50px;
+    margin-bottom: 0;
   }
 
   .leo__img {
@@ -520,15 +500,12 @@ label {
   }
 
   .btn-note {
-    margin-left: 68%;
-    width: 70px;
-    height: 70px;
     background-size: 60px;
     margin-bottom: 6px;
-  }
-
-  .btn_ball {
-    margin-bottom: 0;
+    width: 90px;
+    height: 90px;
+    background-size: 90px;
+    margin-bottom: 10px;
   }
 
   label {
