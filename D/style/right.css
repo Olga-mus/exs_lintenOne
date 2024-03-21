@@ -74,7 +74,7 @@ body {
 .piano {
   width: 700px;
   height: 400px;
-  margin: 50px auto;
+  margin: 60px auto 0;
   display: flex;
 }
 
@@ -124,11 +124,27 @@ body {
   font-size: 16px;
   display: flex;
   justify-content: space-between;
+  margin-top: -470px;
 }
 
 .link__text {
-  color: white;
   text-decoration: none;
+}
+
+.next {
+  background-image: url(../../image/arrow-right.svg);
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.past {
+  background-image: url(../../image/arrow-left.svg);
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1440px) {
@@ -141,6 +157,26 @@ body {
 @media screen and (max-width: 1120px) {
   .title-answer {
     max-width: 830px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .next {
+    width: 70px;
+    height: 70px;
+  }
+
+  .past {
+    width: 70px;
+    height: 70px;
+  }
+
+  .piano {
+    width: 590px;
+  }
+
+  .key {
     font-size: 24px;
   }
 }
@@ -170,18 +206,21 @@ body {
   .piano {
     width: 574px;
     height: 340px;
-    margin-top: 20px;
+    margin-top: 60px;
   }
 
   .key {
     width: 86px;
-    font-size: 24px;
   }
 
   .key-b {
     width: 46px;
     margin-left: -23px;
     margin-right: -23px;
+  }
+
+  .link {
+    margin-top: -408px;
   }
 }
 
@@ -212,6 +251,10 @@ body {
     margin-left: -17px;
     margin-right: -17px;
   }
+
+  .link {
+    margin-top: -330px;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -232,23 +275,15 @@ body {
     font-size: 14px;
     text-align: center;
   }
-}
 
-@media screen and (max-width: 513px) {
-  .piano {
-    width: 360px;
-    height: 234px;
+  .next,
+  .past {
+    width: 50px;
+    height: 50px;
   }
 
-  .key {
-    width: 56px;
-    font-size: 16px;
-  }
-
-  .key-b {
-    width: 30px;
-    margin-left: -15px;
-    margin-right: -15px;
+  .link {
+    margin-top: -320px;
   }
 }
 
@@ -269,4 +304,21 @@ body {
     margin-left: -13px;
     margin-right: -13px;
   }
+
+  .link {
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .piano {
+    margin-top: 40px;
+  }
+
+  .link {
+    margin-top: -214px;
+  }
+}
+
+@media screen and (max-width: 380px) {
 }
