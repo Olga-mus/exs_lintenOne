@@ -20,12 +20,12 @@ setTimeout(function () {
 }, 6000);
 
 //массив из нот для выбора ответа
-const notesVariantAnswer = Array.from([notes[5], notes[7], notes[9]]); //ноты фа соль ля
+const notesVariantAnswer = Array.from([notes[5], notes[9], notes[7]]); //ноты фа ля соль
 
 //нажимаем на кнопку с заданием
 btnTaskNote.addEventListener('click', function (e) {
-  notesVariantAnswer[1].currentTime = 0;
-  notesVariantAnswer[1].play();
+  notesVariantAnswer[2].currentTime = 0;
+  notesVariantAnswer[2].play();
 });
 
 const num = [0, 1, 2];
@@ -54,7 +54,7 @@ function renderRandomImage() {
     if (e.target.classList.contains('btn_strawberries')) {
       console.log('e.target', e.target);
       const strawberries = e.target.getAttribute('data-strawberries');
-      const notesVariantAnswer = [notes[5], notes[7], notes[9]];
+      const notesVariantAnswer = [notes[5], notes[9], notes[7]];
       //связываем кнопку с аудио
       Array.from(document.querySelector('.btns').children).forEach(function (
         el,
@@ -81,7 +81,7 @@ function renderRandomImage() {
       // e.target.classList.toggle('answer');
       letter = [];
       //ответ верный
-      if (e.target.getAttribute('data-answer') != 1) {
+      if (e.target.getAttribute('data-answer') != 2) {
         console.log(e.target.getAttribute('data-answer'));
         letter.push('б');
         console.log(letter);

@@ -20,12 +20,12 @@ setTimeout(function () {
 }, 8000);
 
 //массив из нот для выбора ответа
-const notesVariantAnswer = Array.from([notes[0], notes[2], notes[4]]); // ноты до ре ми
+const notesVariantAnswer = Array.from([notes[2], notes[0], notes[4]]); // ноты ре до ми
 
 //нажимаем на кнопку с заданием
 btnTaskNote.addEventListener('click', function (e) {
-  notesVariantAnswer[1].currentTime = 0;
-  notesVariantAnswer[1].play(); //ноты ре
+  notesVariantAnswer[0].currentTime = 0;
+  notesVariantAnswer[0].play(); //ноты ре
 });
 
 const num = [0, 1, 2];
@@ -54,7 +54,7 @@ function renderRandomImage() {
     if (e.target.classList.contains('btn_chamomile')) {
       console.log('e.target', e.target);
       const chamomile = e.target.getAttribute('data-chamomile');
-      const notesVariantAnswer = [notes[0], notes[2], notes[4]];
+      const notesVariantAnswer = [notes[2], notes[0], notes[4]];
       //связываем кнопку с аудио
       Array.from(document.querySelector('.btns').children).forEach(function (
         el,
@@ -81,7 +81,7 @@ function renderRandomImage() {
       // e.target.classList.toggle('answer');
       letter = [];
       //ответ верный
-      if (e.target.getAttribute('data-answer') != 1) {
+      if (e.target.getAttribute('data-answer') != 0) {
         console.log(e.target.getAttribute('data-answer'));
         letter.push('б');
         console.log(letter);
