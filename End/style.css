@@ -162,6 +162,7 @@ body {
   font-size: 16px;
   line-height: 1.3;
   user-select: none;
+  background-color: white;
 }
 @media screen and (max-width: 880px) {
   .piano {
@@ -317,10 +318,22 @@ body {
   .past {
     width: 50px;
     height: 50px;
-    left: 242px;
+    left: 330px;
   }
 
   .instr-title {
-    font-size: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .past {
+    left: 280px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .past {
+    left: 242px;
   }
 }
