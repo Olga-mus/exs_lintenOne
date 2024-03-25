@@ -1,5 +1,5 @@
 //End
-
+const figInstTitle = document.querySelector('.instr-title');
 setTimeout(function () {
   document.querySelector('.answer__text').textContent =
     'А теперь попробуй поиграть😃. Нажимая кнопки внизу, ты можешь изменить звук. Уверен, у тебя получится сочинить мелодию🎹';
@@ -12,60 +12,54 @@ document.querySelector('.instr').addEventListener('click', function (e) {
   console.log(instrum);
   if (instrum === 1) {
     document.querySelectorAll('.note').forEach(function (note, i) {
-      console.log(note);
       note.src = `../audio/bagpipe/bagpipe-${i + 1}.mp3`;
     });
 
-    document.querySelector('.instr-img').style.backgroundImage =
-      "url('../image/bagpipe.jpg')";
+    document.querySelector('.instr-img').src = '../image/bagpipe.jpg';
+    figInstTitle.textContent = 'Волынка';
   }
 
   if (instrum === 2) {
     document.querySelectorAll('.note').forEach(function (note, i) {
-      console.log(note);
       note.src = `../audio/bells/bell-${i + 1}.mp3`;
     });
 
-    document.querySelector('.instr-img').style.backgroundImage =
-      "url('../image/bells.jpg')";
+    document.querySelector('.instr-img').src = '../image/bells.jpg';
+    figInstTitle.textContent = 'Колокольчики';
   }
 
   if (instrum === 3) {
     document.querySelectorAll('.note').forEach(function (note, i) {
-      console.log(note);
-      note.src = `../audio/piano/piano-${i + 1}.mp3`;
+      note.src = `../audio/clarinet/clarinet-${i + 1}.mp3`;
     });
-    document.querySelector('.instr-img').style.backgroundImage =
-      "url('../image/piano.jpg')";
+    document.querySelector('.instr-img').src = '../image/clarinet.jpg';
+    figInstTitle.textContent = 'Кларнет';
   }
 
   if (instrum === 4) {
     document.querySelectorAll('.note').forEach(function (note, i) {
-      console.log(note);
       note.src = `../audio/flute/flute-${i + 1}.mp3`;
     });
 
-    document.querySelector('.instr-img').style.backgroundImage =
-      "url('../image/flute.jpg')";
+    document.querySelector('.instr-img').src = '../image/flute.jpg';
+    figInstTitle.textContent = 'Флейта';
   }
 
   if (instrum === 5) {
     document.querySelectorAll('.note').forEach(function (note, i) {
-      console.log(note);
       note.src = `../audio/harp/harp-${i + 1}.mp3`;
     });
 
-    document.querySelector('.instr-img').style.backgroundImage =
-      "url('../image/harp.jpg')";
+    document.querySelector('.instr-img').src = '../image/harp.jpg';
+    figInstTitle.textContent = 'Арфа';
   }
   if (instrum === 6) {
     document.querySelectorAll('.note').forEach(function (note, i) {
-      console.log(note);
       note.src = `../audio/strings/string-${i + 1}.mp3`;
     });
 
-    document.querySelector('.instr-img').style.backgroundImage =
-      "url('../image/strings.jpg')";
+    document.querySelector('.instr-img').src = '../image/strings.jpg';
+    figInstTitle.textContent = 'Скрипка';
   }
 
   if (instrum >= 6) {
@@ -78,8 +72,8 @@ document.querySelector('.fp').addEventListener('click', function (e) {
     console.log(note);
     note.src = `../audio/piano/piano-${i + 1}.mp3`;
   });
-  document.querySelector('.instr-img').style.backgroundImage =
-    "url('../image/piano.jpg')";
+  document.querySelector('.instr-img').src = '../image/piano.jpg';
+  figInstTitle.textContent = 'Фортепиано';
 });
 
 //звуки пианино
