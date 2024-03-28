@@ -99,6 +99,9 @@ function renderRandomImage() {
           console.log('верно');
           document.querySelector('.main').classList.add('hidden');
           document.querySelector('.answer').classList.remove('hidden');
+          document.querySelector('.leo__img-result').src =
+            '../image/leo-right.png';
+
           //звуки пианино
           let keys = document.querySelectorAll('.key');
           console.log(keys);
