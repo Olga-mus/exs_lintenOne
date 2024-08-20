@@ -14,6 +14,9 @@
 **Функционал:**
 
 Приложение-игра с функцией перетаскивания элементов и проверкой правильности решения.
+Westage Studio кларнет
+BellsEbuth
+Kurzweil
 
 **Технологии:**
 
@@ -24,4 +27,4 @@ Grid Layout, Flexbox, HTML, CSS, Nested БЭМ, JavaScript
 [GitHub Pages](https://olga-mus.github.io/exs_listenOne/index.html)
 
 **Статус проекта:**
-В разработке.
+В разработке. Требуется улучшить архитектуру. В планах - освоить react native и выложить это приложение в качестве мобильного.
